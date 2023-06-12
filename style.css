@@ -1,0 +1,80 @@
+﻿body::before
+{
+    display: block;
+    content: '';
+    height: 60px;
+}
+
+.nav-custom {
+    color: white;
+    transition: .15s;
+}
+
+.nav-custom:hover{
+    opacity: 50%;
+}
+
+.loader {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 1000%;
+    height: 1000%;
+    background: white;
+}
+
+.numberCircle {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    background: #fff;
+    border: 2px solid #ff4444;
+    color: black;
+    text-align: center;
+    font: 14px Arial, sans-serif;
+    float: right;
+}
+
+.characterCard {
+    background-image: url(images/cardTextureThree.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+}
+
+.aboutBackground {
+    background-image: url(images/cardTextureThree.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: center;
+    height: 100vh;
+}
+
+.stats{
+    width: 40%;
+}
+
+.stats h1{
+    font-size: clamp(28px, 2vw, 40px);
+}
+
+.stats h6{
+    font-size: clamp(12px, .6vw, 18px);
+}
+
+.desciption hr{
+    margin-top: -2%;
+    color: black;
+}
+
+.selection {
+    transition: .15s;
+}
+
+.selection:hover{
+    transform: translate(0, -10px);
+}
