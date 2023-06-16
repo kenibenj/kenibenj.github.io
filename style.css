@@ -5,13 +5,92 @@
     height: 60px;
 }
 
+.nav-link{
+    font-size: large;
+    font-family: 'Ubuntu Mono', sans-serif;
+}
+
 .nav-custom {
     color: white;
     transition: .15s;
 }
 
 .nav-custom:hover{
-    opacity: 50%;
+    opacity: 60%;
+}
+
+.nav-custom::after{
+    font-weight: bold;
+    content: "|";
+    opacity: 0%;
+    border-bottom: none;
+}
+
+.nav-custom:hover::after{
+    opacity: 0%;
+    animation: blink 1s infinite;
+}
+
+.circle-animation-hover{
+    outline: 3px solid white;
+    outline-offset: 2px;
+    border-radius: 50%;
+    transition: 0.8s;
+}
+
+.circle-animation-hover:hover{
+    outline-offset: 70px;
+    transform: rotate(8deg);
+    cursor: pointer;
+}
+
+.link-selected{
+    border-bottom: 2px solid white;
+}
+
+.link-selected::after{
+    border-bottom: none;
+}
+
+.main-title{
+    font-family: 'Ubuntu Mono', sans-serif;
+    transition: .15s;
+}
+
+.main-title::after{
+    content: "|";
+    opacity: 0%;
+    border-bottom: none;
+    animation: blink 1s infinite;
+}
+
+.sub-title{
+    font-family: 'Ubuntu Mono', sans-serif;
+}
+
+ .main{
+    font-family: 'Ubuntu Mono', sans-serif;
+    font-size: xx-large;
+    color: black;
+    transition: .15s;
+    text-decoration: none;
+    list-style: none;
+ }
+
+ .main:hover{
+    opacity: 60%;
+    list-style-type: '>';
+ }
+
+ .main a::after{
+    content: "|";
+    opacity: 0%;
+    border-bottom: none;
+ }
+
+ .main:hover::after{
+    opacity: 0%;
+    animation: blink 1s infinite;
 }
 
 .loader {
@@ -25,56 +104,47 @@
     background: white;
 }
 
-.numberCircle {
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    padding: 8px;
-    background: #fff;
-    border: 2px solid #ff4444;
-    color: black;
-    text-align: center;
-    font: 14px Arial, sans-serif;
-    float: right;
-}
-
-.characterCard {
-    background-image: url(images/cardTextureThree.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-y: bottom;
-}
-
-.aboutBackground {
-    background-image: url(images/cardTextureThree.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-y: bottom;
-    background-position-x: center;
-    height: 100vh;
-}
-
-.stats{
-    width: 40%;
-}
-
-.stats h1{
-    font-size: clamp(28px, 2vw, 40px);
-}
-
-.stats h6{
-    font-size: clamp(12px, .6vw, 18px);
-}
-
-.desciption hr{
-    margin-top: -2%;
-    color: black;
-}
-
-.selection {
+.social-items a{
+    font-size: 220%;
+    color: white;
     transition: .15s;
 }
 
-.selection:hover{
-    transform: translate(0, -10px);
+.social-items a:hover{
+    opacity: 60%;
+}
+
+body {
+    background: linear-gradient(to right top, rgb(211,211,211), white 70%);
+    background-attachment: fixed; /*edit*/
+    font-family: 'Ubuntu Mono', sans-serif;
+}
+
+.background {
+    background-image: url(images/newGram\ full\ transparent\(Background\).png);
+    background-size: 120vh;
+    background-repeat: no-repeat;
+    background-position-y: 0vh;
+    background-position-x: 45vw;
+    height: 100vh;
+    overflow: hidden;
+    transition: .15s;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    51% {
+        opacity: 0;
+    }
 }
