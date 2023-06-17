@@ -78,8 +78,11 @@
  }
 
  .main:hover{
-    opacity: 60%;
     list-style-type: '>';
+ }
+
+ .main a:hover{
+     opacity: 60%;
  }
 
  .main a::after{
