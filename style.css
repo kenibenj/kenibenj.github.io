@@ -1,4 +1,16 @@
-﻿body::before
+﻿html{
+    bottom: 0;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(to right top, rgb(211,211,211), white 70%);
+    background-attachment: fixed; /*edit*/
+    font-family: 'Ubuntu Mono', sans-serif;
+    background-color: black;
+}
+
+body::before
 {
     display: block;
     content: '';
@@ -55,6 +67,7 @@
 .main-title{
     font-family: 'Ubuntu Mono', sans-serif;
     transition: .15s;
+    font-size: 5vw;
 }
 
 .main-title::after{
@@ -66,23 +79,30 @@
 
 .sub-title{
     font-family: 'Ubuntu Mono', sans-serif;
+    font-size: 2.5vw;
+    padding: 0;
+    white-space: pre;
+}
+
+.sub-title::before{
+    content: "   ";
+}
+
+.sub-title::after{
+    content: '   '
 }
 
  .main{
     font-family: 'Ubuntu Mono', sans-serif;
-    font-size: xx-large;
+    font-size: 2.6vw;
     color: black;
     transition: .15s;
     text-decoration: none;
     list-style: none;
  }
 
- .main:hover{
-    list-style-type: '>';
- }
-
  .main a:hover{
-     opacity: 60%;
+    opacity: 60%;
  }
 
  .main a::after{
@@ -108,7 +128,7 @@
 }
 
 .social-items a{
-    font-size: 220%;
+    font-size: xx-large;
     color: white;
     transition: .15s;
 }
@@ -117,22 +137,38 @@
     opacity: 60%;
 }
 
-body {
-    background: linear-gradient(to right top, rgb(211,211,211), white 70%);
-    background-attachment: fixed; /*edit*/
-    font-family: 'Ubuntu Mono', sans-serif;
-}
-
 .background {
     background-image: url(images/newGram\ full\ transparent\(Background\).png);
     background-size: 120vh;
     background-repeat: no-repeat;
     background-position-y: 0vh;
     background-position-x: 45vw;
-    height: 100vh;
+    height: 85vh;
     overflow: hidden;
     transition: .15s;
 }
+
+@media screen and (max-width: 767px) {
+    .sub-title::before{
+        content: "";
+    }
+    
+    .sub-title::after{
+        content: '   '
+    }
+
+    .main-title{
+        font-size: xx-large;
+    }
+
+    .sub-title{
+        font-size: larger;
+    }
+
+    .main{
+        font-size: larger;
+    }
+  }
 
 @keyframes blink {
     0% {
