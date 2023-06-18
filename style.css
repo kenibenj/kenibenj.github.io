@@ -99,6 +99,7 @@ body::before
     transition: .15s;
     text-decoration: none;
     list-style: none;
+    opacity: 0%;
  }
 
  .main a:hover{

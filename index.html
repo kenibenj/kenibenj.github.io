@@ -82,6 +82,7 @@
             typeWriterOne();
             setTimeout(typeWriterTwo, 1000);
             setTimeout(typeWriterThree, 2000);
+            setTimeout(fadeInElements("main"), 30000);
         };
 
         var txtOne = 'Hello there, I\'m Ben.'; /* The text */
@@ -124,6 +125,26 @@
                     clearInterval(intervalId);
                 }
             }, speed);
+        }
+
+        function fadeInElements(className) {
+            var elements = document.getElementsByClassName(className);
+
+            function fadeIn(element) {
+                var opacity = 0;
+                var interval = setInterval(function () {
+                    if (opacity >= 1) {
+                        clearInterval(interval);
+                    }
+                    element.style.opacity = opacity;
+                    element.style.filter = 'alpha(opacity=' + opacity * 100 + ')';
+                    opacity += 0.1;
+                }, 100);
+            }
+
+            for (var i = 0; i < elements.length; i++) {
+                fadeIn(elements[i]);
+            }
         }
     </script>
 
