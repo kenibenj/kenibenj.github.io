@@ -1,8 +1,8 @@
-﻿html{
+﻿html {
     bottom: 0;
 }
 
-body{
+body {
     height: 100vh;
     background: linear-gradient(to right top, rgb(211,211,211), white 70%);
     background-attachment: fixed; /*edit*/
@@ -70,12 +70,7 @@ body::before
     font-size: 5vw;
 }
 
-.main-title::after{
-    content: "|";
-    opacity: 0%;
-    border-bottom: none;
-    animation: blink 1s infinite;
-}
+
 
 .sub-title{
     font-family: 'Ubuntu Mono', sans-serif;
@@ -85,7 +80,7 @@ body::before
 }
 
 .sub-title::before{
-    content: "   ";
+    content: '   ';
 }
 
 .sub-title::after{
@@ -102,14 +97,13 @@ body::before
     opacity: 0%;
  }
 
- .main a:hover{
-    opacity: 60%;
+ .main:hover{
  }
 
  .main a::after{
     content: "|";
     opacity: 0%;
-    border-bottom: none;
+
  }
 
  .main:hover::after{
@@ -123,8 +117,8 @@ body::before
     margin: 0;
     top: 0;
     left: 0;
-    width: 1000%;
-    height: 1000%;
+    width: 100vw;
+    height: 100vh;
     background: white;
 }
 
