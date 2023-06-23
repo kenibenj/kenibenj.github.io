@@ -70,8 +70,6 @@ body::before
     font-size: 5vw;
 }
 
-
-
 .sub-title{
     font-family: 'Ubuntu Mono', sans-serif;
     font-size: 2.5vw;
@@ -85,6 +83,22 @@ body::before
 
 .sub-title::after{
     content: '   '
+}
+
+.page-title{
+    font-family: 'Ubuntu Mono', sans-serif;
+    font-size: 2.8vw;
+    white-space: pre;
+}
+
+.page-title::after{
+    content: '|';
+    animation: blink 1s infinite;
+    opacity: 0%;
+}
+
+.page-title::before{
+    content: '  ';
 }
 
  .main{
@@ -138,9 +152,49 @@ body::before
     background-repeat: no-repeat;
     background-position-y: 0vh;
     background-position-x: 45vw;
-    height: 85vh;
+    min-height: 85vh;
     overflow: hidden;
     transition: .15s;
+}
+
+.black-border{
+    border: 5px solid black;
+    border-color: black;
+    border-radius: 10px;
+    background: black;
+}
+
+.image-selector{
+    opacity: 100%;
+    transition: .05s;
+    width: 50%;
+    outline: 0px solid black;
+    outline-offset: 0px;
+    border-radius: 50%;
+}
+
+.image-selector:hover{
+    border: 0px solid black;
+    opacity: 70%;
+    cursor: pointer;
+    outline: 5px solid black;
+    outline-offset: 0px;
+    border-radius: 50%;
+}
+
+.para-carousel{
+    color: white;
+    background-color: rgb(0,0,0,.6);
+    border-radius: 10%;
+}
+
+
+.para{
+    font-size: 15pt;
+}
+
+.para a{
+    color: black;
 }
 
 @media screen and (max-width: 767px) {
@@ -160,9 +214,25 @@ body::before
         font-size: larger;
     }
 
+    .page-title{
+        font-size: x-large;
+    }
+
     .main{
         font-size: larger;
     }
+    .image-selector{
+        width: 100%;
+    }
+    .image-selector:hover{
+        width: 1100%;
+    }
+    .para{
+        font-size: 13pt;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
   }
 
 @keyframes blink {

@@ -39,7 +39,7 @@
             <div class="collapse navbar-collapse text-end mx-md-3" id="navmenu">
                 <ul class="navbar-nav">
                     <li class="nav-item mx-1">
-                        <a href="#" class="nav-link nav-custom link-selected">Home</a>
+                        <a href="index.html" class="nav-link nav-custom">Home</a>
                     </li>
                     <li class="nav-item mx-1">
                         <a href="code.html" class="nav-link nav-custom">Code</a>
@@ -51,7 +51,7 @@
                         <a href="media.html" class="nav-link nav-custom">Media</a>
                     </li>
                     <li class="nav-item mx-1">
-                        <a href="about.html" class="nav-link nav-custom">About</a>
+                        <a href="about.html" class="nav-link nav-custom link-selected">About</a>
                     </li>
                     <li class="nav-item mx-1">
                         <a href="contact.html" class="nav-link nav-custom">Contact</a>
@@ -62,48 +62,113 @@
     </nav>
 
     <!-- Content -->
-    <section class="p-5 text-center text-md-start background" style="border-bottom: 3px solid black;">
-        <div class="container">
-            <div id="carouselExampleCaptions" class="carousel slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <section class="p-5 background" style="border-bottom: 3px solid black;">
+        <div class="container py-md-5 py-3 text-center text-md-start">
+            <div class="row px-md-5">
+                <h1 class="page-title pb-sm-3" >About Me</h1>
+                <div class="col-md">
+                    <p class="para">
+                        Hello, my name is Benjamin Keninger and I'm a recent computer science graduate from Idaho State University.
+                        I also happen to be an avid fan of history, media creation, games, and walking.
+                        This website is primarily devoted to talking about and showcasing my many interests, academic or otherwise, many of which are covered in a web page of their own.
+                        The following paragraphs will serve to introduce myself and give a brief background of who I am and what I choose to do with my finite time on this planet.
+                    </p>
+                    <hr class="pb-3"/>
+                    <img class="img-fluid mx-auto float-sm-start me-4 mb-1 rounded-circle black-border image-selector " src="images/gradPic2.jpg" data-bs-toggle="modal" data-bs-target="#exampleModal" />
+                    <p class="para">
+                        Now that I'm twenty-one years old free time doesn't come nearly as free as it use to;
+                        much of the time that used to be devoted to doing stupid things with friends is now furthering my skills and working at my job in internet tech support
+                        (previously I had worked for almost 4 years as a dishwasher at a <a s href="https://cafetuscano.com/">local restaurant</a>).
+                        What free time I do have, however, largely consists of writing code for personal projects, reading up on history, taking strolls around beautiful Pocatello, Idaho, and playing games with friends - whether that be video games with buddies online or Dungeons & Dragons with work colleagues.
+                        I also play tennis from time to time, and have even recently taken up miniature painting (I promise it's more enjoyable than you'd think).
+                    </p>
+                    <p class="para">
+                        I like to think I'm an optimistic and open-minded person;
+                        I'm a big fan of exploring new areas of interest and am always down to give other peoples' favorite pastimes a chance.
+                        As previously mentioned, many of my hobbies have their own dedicated page you can visit, so if you are interested in what I have made or said in regards to any of those topics, please do check out the links below.
+                        If you have professional inquiries or just simply want to chat, you can get in touch with me you using the <a href="contact">contact page</a>. 
+                        For a condensed summary of my academic experience, work history, and skill set, you can view my <a href="downloadables/BenjaminKeningerResume.pdf">resume</a> or check out my Linkedin page found using the icon below.
+                    </p>
+                    <p class="para">
+                        Good luck out there!
+                    </p>
+                    <p class="para">
+                        - Ben
+                    </p>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="https://dnd.kenibenj.com/images/exampleTwo.JPG" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://dnd.kenibenj.com/images/exampleTwo.JPG" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://dnd.kenibenj.com/images/exampleTwo.JPG" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">More pictures of yours truly</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="col px-5 py-2 pb-4" style="margin: auto;">
+                        <div id="carouselExampleCaptions" class="carousel slide px-5 carousel-dark">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            </div>
+                            <div class="carousel-inner custom-carousel black-border">
+                                <div class="carousel-item active">
+                                    <img alt="This is me, Benjamin. Hello!" src="images/img1.png" title="This is me, Benjamin. Hello!" class="d-block w-100" >
+                                    <div class="carousel-caption d-none d-sm-block">
+                                        <p class="para-carousel">This is me, Benjamin. Hello!</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img alt="Me and an apple pie" src="images/pie.png" title="Me and an apple pie" class="d-block w-100">
+                                    <div class="carousel-caption d-none d-sm-block">
+                                        <p class="para-carousel">Me and an apple pie on Thanksgiving, 2021</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img alt="e and some friends playing Dungeons & Dragons" src="images/img4.png" title="e and some friends playing Dungeons & Dragons" class="d-block w-100" >
+                                    <div class="carousel-caption d-none d-sm-block">
+                                        <p class="para-carousel">Me and some friends playing Dungeons & Dragons</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img alt="Me and some buds after playing tennis" src="images/tennis2.png" title="Me and some buds after playing tennis" class="d-block w-100">
+                                    <div class="carousel-caption d-none d-sm-block">
+                                        <p class="para-carousel">Me and some buds after playing tennis</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img alt="Chicago!" src="images/chicago.png" title="Chicago!" class="d-block w-100" >
+                                    <div class="carousel-caption d-none d-sm-block">
+                                        <p class="para-carousel">Chicago!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" style="color: black" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" style="color: black" aria-hidden="true"></span>
+                                <span class="visually-hidden" style="color: black">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between p-3">
+                    <a style="font-size: xx-large; color: black;" href="https://www.instagram.com/kenibenj/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="loader">
     </div>
@@ -118,7 +183,7 @@
                 <li class="social-items mx-3"><a href="https://www.youtube.com/channel/UCZRzfx7rSdtQDxwk9zvJw4A"><i class="fa-brands fa-youtube"></i></a></li>
                 <li class="social-items mx-3"><a href="https://soundcloud.com/gramfaucet"><i class="fab fa-soundcloud"></i></a></li>
             </ul>
-            <p class="">&copy; kenibenj.com &bull; 2023</p>
+            <p class="">&copy; Benjamin Keninger &bull; 2023</p>
             <a href="#" class="position-absolute bottom-0 end-0 p-3 d-md-block d-none"><i class="bi bi-arrow-up-circle h2 text-white"></i></a>
         </div>
     </footer>
