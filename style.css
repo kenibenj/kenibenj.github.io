@@ -146,6 +146,19 @@ body::before
     opacity: 60%;
 }
 
+.footer-button {
+    cursor: default;
+}
+
+.bi {
+    transition: .15s;
+}
+
+.bi:hover {
+    opacity: 60%;
+    cursor: pointer;
+}
+
 .background {
     background-image: url(images/newGram\ full\ transparent\(Background\).png);
     background-size: 120vh;
@@ -197,6 +210,72 @@ body::before
     color: black;
 }
 
+.icon::after {
+    content: "\f185";
+    font-family: "Font Awesome 5 Free";
+}
+
+.clicked::after {
+    content: "\f186";
+    font-family: "Font Awesome 5 Free";
+}
+
+.icon {
+    transition: .15s;
+    color: white;
+    font-size: xx-large;
+}
+
+.icon-div:hover{
+    opacity: 60%;
+    cursor: pointer;
+}
+
+.icon-div {
+    transition: .15s;
+}
+
+form input, textarea {
+    border: none;
+    outline: solid;
+    outline-width: 2px;
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    transition: all .15s;
+    font-size: 15pt;
+}
+
+form input{
+    width: 50%;
+}
+
+form label {
+    font-size: 15pt;
+}
+
+form textarea:focus, input:focus {
+    filter: drop-shadow(0 0 .1em black);
+}
+
+form button {
+    padding: 15px;
+    background-color: rgb(15,15,15);
+    color: white;
+    font-size: 18px;
+    border: 1px;
+    border-radius: 3px;
+    width: 150px;
+    margin: 20px auto 0;
+    transition: all .15s;
+}
+
+form button:hover {
+    filter: drop-shadow(0 0 .1em black);
+    opacity: 90%;
+}
+
+
+
 @media screen and (max-width: 767px) {
     .sub-title::before{
         content: "";
@@ -230,6 +309,10 @@ body::before
     .para{
         font-size: 13pt;
     }
+
+    form input{
+        width: 100%;
+    }
   }
 
   @media screen and (max-width: 1200px) {
@@ -251,43 +334,4 @@ body::before
     51% {
         opacity: 0;
     }
-}
-
-form input{
-    border: none;
-    outline: solid;
-    outline-width: 2px;
-    background-color: #f5f5f5;
-    border-radius: 3px;
-    transition: all .15s;
-}
-
-form textarea{
-    border: none;
-    outline: solid;
-    outline-width: 2px;
-    background-color: #f5f5f5;
-    border-radius: 3px;
-    transition: all .15s;
-}
-
-form textarea:focus, input:focus{
-    filter: drop-shadow(0 0  .1em black);
-}
-
-form button{
-    padding: 15px;
-    background-color: rgb(15,15,15);
-    color: white;
-    font-size: 18px;
-    border: 1px;
-    border-radius: 3px;
-    width: 150px;
-    margin: 20px auto 0;
-    transition: all .15s;
-}
-
-form button:hover{
-    filter: drop-shadow(0 0  .1em black);
-    opacity: 90%;
 }
