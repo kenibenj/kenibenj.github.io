@@ -3,11 +3,10 @@
 }
 
 body {
-    height: 100vh;
-    background: linear-gradient(to right top, rgb(211,211,211), white 70%);
+    min-height: 100vh;
+    background: linear-gradient(to right top, rgb(211,211,211), white 100%);
     background-attachment: fixed; /*edit*/
     font-family: 'Ubuntu Mono', sans-serif;
-    background-color: black;
 }
 
 body::before
@@ -172,16 +171,15 @@ body::before
 
 .black-border{
     border: 5px solid black;
-    border-color: black;
     border-radius: 10px;
     background: black;
 }
 
 .image-selector{
     opacity: 100%;
-    transition: .05s;
+    transition: .1s;
     width: 50%;
-    outline: 0px solid black;
+    outline: 0px solid;
     outline-offset: 0px;
     border-radius: 50%;
 }
@@ -201,14 +199,19 @@ body::before
     border-radius: 10%;
 }
 
+a {
+    all: unset;
+}
 
 .para{
     font-size: 15pt;
+    transition: .15s;
 }
 
 .para a{
-    color: black;
+    text-decoration: underline;
 }
+
 
 .icon::after {
     content: "\f185";

@@ -22,16 +22,39 @@
     <script>
         $(window).on("load", function () { $(".loader").fadeOut("medium"); });
 
-        var i = 0
+        var counter = 0
         function switchTheme() {
+
             var element = document.getElementById("sun");
-            if (i % 2 == 0) {
+            var para = document.getElementsByClassName('para');
+            var pageTitle = document.getElementsByClassName('page-title');
+            var imageSelector = document.getElementsByClassName('image-selector');
+            var imageSelector = document.getElementsByClassName('image-selector');
+            var mergedCollection = [...para, ...pageTitle];
+
+            if (counter % 2 == 0) {
                 element.classList.add("clicked");
+                document.body.style.background = "linear-gradient(to right top, rgb(141,141,141), rgb(65,65,65) 100%)";
+                Array.from(mergedCollection).forEach(function (element) {
+                    element.style.color = 'white';
+                });
+                Array.from(imageSelector).forEach(function (element) {
+                    element.style.borderColor = 'white';
+                    element.style.outlineColor = 'white';
+                });
             }
             else {
                 element.classList.remove("clicked");
+                document.body.style.background = "linear-gradient(to right top, rgb(211,211,211), white 100%)";
+                Array.from(mergedCollection).forEach(function (element) {
+                    element.style.color = 'black';
+                });
+                Array.from(imageSelector).forEach(function (element) {
+                    element.style.borderColor = 'black';
+                    element.style.outlineColor = 'black';
+                });
             }
-            i++;
+            counter++;
         }
     </script>
 </head>
