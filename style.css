@@ -1,12 +1,13 @@
 ﻿html {
-    bottom: 0;
+    max-height: 100vh;
 }
 
 body {
     min-height: 100vh;
-    background: linear-gradient(to right top, rgb(211,211,211), white 100%);
-    background-attachment: fixed; /*edit*/
+    background: linear-gradient(to right top, rgb(201,201,201), white 70%);
+    background-attachment: fixed;
     font-family: 'Ubuntu Mono', sans-serif;
+    background-repeat: no-repeat;
 }
 
 body::before
@@ -28,6 +29,7 @@ body::before
 
 .nav-custom:hover{
     opacity: 60%;
+    cursor: pointer;
 }
 
 .nav-custom::after{
@@ -110,13 +112,14 @@ body::before
     opacity: 0%;
  }
 
- .main:hover{
- }
-
  .main a::after{
     content: "|";
     opacity: 0%;
 
+ }
+
+ .main:hover{
+    cursor: pointer;
  }
 
  .main:hover::after{
@@ -125,14 +128,14 @@ body::before
 }
 
 .loader {
-    position: absolute;
-    padding: 0;
-    margin: 0;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
     background: white;
+    z-index: 1;
 }
 
 .social-items a{
@@ -143,6 +146,7 @@ body::before
 
 .social-items a:hover{
     opacity: 60%;
+    cursor: pointer;
 }
 
 .footer-button {
@@ -177,7 +181,7 @@ body::before
 
 .image-selector{
     opacity: 100%;
-    transition: .1s;
+    transition: .05s;
     width: 50%;
     outline: 0px solid;
     outline-offset: 0px;
@@ -205,17 +209,16 @@ a {
 
 .para{
     font-size: 15pt;
-    transition: .15s;
 }
 
 .para a{
     text-decoration: underline;
+    transition: .15s;
 }
 
-
-.icon::after {
-    content: "\f185";
-    font-family: "Font Awesome 5 Free";
+.para a:hover{
+    cursor: pointer;
+    opacity: 60%;
 }
 
 .clicked::after {
@@ -229,20 +232,16 @@ a {
     font-size: xx-large;
 }
 
-.icon-div:hover{
+.icon:hover{
     opacity: 60%;
     cursor: pointer;
 }
 
-.icon-div {
-    transition: .15s;
-}
 
 form input, textarea {
     border: none;
     outline: solid;
     outline-width: 2px;
-    background-color: #f5f5f5;
     border-radius: 3px;
     transition: all .15s;
     font-size: 15pt;
@@ -262,7 +261,7 @@ form textarea:focus, input:focus {
 
 form button {
     padding: 15px;
-    background-color: rgb(15,15,15);
+    background-color: black;
     color: white;
     font-size: 18px;
     border: 1px;
@@ -277,6 +276,9 @@ form button:hover {
     opacity: 90%;
 }
 
+footer{
+    z-index: 2;
+}
 
 
 @media screen and (max-width: 767px) {
