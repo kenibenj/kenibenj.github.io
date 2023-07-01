@@ -259,7 +259,7 @@ form textarea:focus, input:focus {
     filter: drop-shadow(0 0 .1em black);
 }
 
-form button {
+button {
     padding: 15px;
     background-color: black;
     color: white;
@@ -271,7 +271,7 @@ form button {
     transition: all .15s;
 }
 
-form button:hover {
+button:hover {
     filter: drop-shadow(0 0 .1em black);
     opacity: 90%;
 }
@@ -279,6 +279,16 @@ form button:hover {
 footer{
     z-index: 2;
 }
+
+.selection {
+    transition: .15s;
+}
+
+.selection:hover{
+    transform: translate(0, -10px);
+    filter: drop-shadow(0 0 .2em black);
+}
+
 
 
 @media screen and (max-width: 767px) {
