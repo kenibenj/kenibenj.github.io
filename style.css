@@ -285,7 +285,7 @@ footer{
 }
 
 .selection:hover{
-    transform: translate(0, -10px);
+    transform: scale(101.7%);
     filter: drop-shadow(0 0 .2em black);
 }
 
