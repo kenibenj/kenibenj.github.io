@@ -21,6 +21,19 @@
 
     <script type="text/javascript" src="scripts.js"></script> 
 
+    <script>
+        $(function() {
+            $("#cardBunkerBlitz").hover(
+                function() {
+                    $("#myImg").attr("src", "https://lh4.googleusercontent.com/i1RprwcvxhbN2TAMunNxS4RiNVT0DvlD9FNQCvPFuJ0=w140-h165-no");
+                },
+                function() {
+                    $("#myImg").attr("src", "https://lh4.googleusercontent.com/-gZiu96oTuu4/Uag5oWLQHfI/AAAAAAAABSE/pl1W8n91hH0/w140-h165-no/Homer-Static.png");
+                }                         
+            );                  
+        });
+    </script>
+
 </head>
 
 <body>
@@ -87,6 +100,54 @@
                         <div class="row g-4 text-center py-5">
 
                             <div class="col-md-8 col-lg-4">
+                                <div class="card selection bg-dark text-white text-start" id="cardBunkerBlitz">
+                                    <a class="stretched-link d-sm-block d-md-none d-lg-none" data-bs-toggle="modal" data-bs-target="#modalBunkerBlitz"></a>
+                                    <img id="myImg" class="card-img-top" src="https://lh4.googleusercontent.com/-gZiu96oTuu4/Uag5oWLQHfI/AAAAAAAABSE/pl1W8n91hH0/w140-h165-no/Homer-Static.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bunker Blitz</h5>
+                                        <p class="card-text">
+                                            Top-down, two-dimensional tank game with enemy AI, power-ups, and a final boss tank that must be defeated in order to win the game.
+                                        </p>
+                                        <hr/>
+                                        <small><em><strong>C++ / Qt</strong></em></small>
+                                        <div class="d-flex justify-content-between pt-2">
+                                            <a class="mt-auto btn btn-outline-light d-md-block d-none" data-bs-toggle="modal" data-bs-target="#modalBunkerBlitz">Learn More</a>
+                                            <small class="">
+                                                <div>
+                                                    <i class="fas fa-user text-white"></i>
+                                                    Group of 5
+                                                </div>
+                                                <div>
+                                                    <i class="fas fa-calendar-alt text-white"></i>
+                                                    Spring, 2023
+                                                </div>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="modalBunkerBlitz" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Bunker Blitz</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer p-3 d-flex justify-content-between">
+                                        <a class="modal-icon" href="https://www.instagram.com/kenibenj/"><i class="fa-brands fa-instagram"></i></a></li>
+                                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-8 col-lg-4">
                                 <div class="card selection bg-dark text-white text-start">
                                     <img class="card-img-top" src="https://images.unsplash.com/photo-1535025639604-9a804c092faa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6cb0ceb620f241feb2f859e273634393&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
                                     <div class="card-body">
@@ -131,34 +192,47 @@
                                 </div>
                             </div>
 
-
                             <div class="col-md-8 col-lg-4">
-                                <div class="card h-100 bg-dark text-light">
-                                    <div class="card-body d-flex flex-column text-center">
-                                        <i class="h1 mb-3 bi bi-shield-lock-fill"></i>
-                                        <h3 class="card-title">
-                                            Register an Account
-                                        </h3>
+                                <div class="card selection bg-dark text-white text-start">
+                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1535025639604-9a804c092faa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6cb0ceb620f241feb2f859e273634393&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bunker Blitz</h5>
                                         <p class="card-text">
-                                            While any user can create and view characters, only those with a registered account may save their characters and edit them later.
+                                            Top-down, two-dimensional tank game with enemy AI, power-ups, and a final boss tank that must be defeated in order to win the game.
                                         </p>
-                                        <a class="mt-auto btn btn-danger" href="/User/Register">Register Now</a>
+                                        <hr/>
+                                        <small><em><strong>C++ / Qt</strong></em></small>
+                                        <div class="d-flex justify-content-between pt-2">
+                                            <a class="mt-auto btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleBunkerBlitz">Learn More</a>
+                                            <small class="">
+                                                <div>
+                                                    <i class="fas fa-user text-white"></i>
+                                                    Group of 5
+                                                </div>
+                                                <div>
+                                                    <i class="fas fa-calendar-alt text-white"></i>
+                                                    Spring, 2023
+                                                </div>
+                                            </small>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-
-                            <div class="col-md-8 col-lg-4">
-                                <div class="card h-100 bg-dark text-light">
-                                    <div class="card-body d-flex flex-column text-center">
-                                        <i class="h1 mb-3 bi bi-shield-fill-exclamation"></i>
-                                        <h3 class="card-title">
-                                            About
-                                        </h3>
-                                        <p class="card-text">
-                                            Learn more about the purpose of the D&amp;D CMS as well as the underlying code used to create it.
-                                        </p>
-                                        <a class="mt-auto btn btn-danger" href="/Home/About">Learn More</a>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleBunkerBlitz" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -166,33 +240,272 @@
                         </div>
 
                         <div class="row g-4 collapse" id="card-collapse">
-
                             <div class="col-md-8 col-lg-4">
-                                <div class="card h-100 bg-dark text-light">
-                                    <div class="card-body d-flex flex-column text-center">
-                                        <i class="h1 mb-3 bi bi-shield-fill-exclamation"></i>
-                                        <h3 class="card-title">
-                                            About
-                                        </h3>
+                                <div class="card selection bg-dark text-white text-start">
+                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1535025639604-9a804c092faa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6cb0ceb620f241feb2f859e273634393&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bunker Blitz</h5>
                                         <p class="card-text">
-                                            Learn more about the purpose of the D&amp;D CMS as well as the underlying code used to create it.
+                                            Top-down, two-dimensional tank game with enemy AI, power-ups, and a final boss tank that must be defeated in order to win the game.
                                         </p>
-                                        <a class="mt-auto btn btn-danger" href="/Home/About">Learn More</a>
+                                        <hr/>
+                                        <small><em><strong>C++ / Qt</strong></em></small>
+                                        <div class="d-flex justify-content-between pt-2">
+                                            <a class="mt-auto btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleBunkerBlitz">Learn More</a>
+                                            <small class="">
+                                                <div>
+                                                    <i class="fas fa-user text-white"></i>
+                                                    Group of 5
+                                                </div>
+                                                <div>
+                                                    <i class="fas fa-calendar-alt text-white"></i>
+                                                    Spring, 2023
+                                                </div>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleBunkerBlitz" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
                             
                             <div class="col-md-8 col-lg-4">
-                                <div class="card h-100 bg-dark text-light">
-                                    <div class="card-body d-flex flex-column text-center">
-                                        <i class="h1 mb-3 bi bi-shield-fill-exclamation"></i>
-                                        <h3 class="card-title">
-                                            About
-                                        </h3>
+                                <div class="card selection bg-dark text-white text-start">
+                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1535025639604-9a804c092faa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6cb0ceb620f241feb2f859e273634393&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bunker Blitz</h5>
                                         <p class="card-text">
-                                            Learn more about the purpose of the D&amp;D CMS as well as the underlying code used to create it.
+                                            Top-down, two-dimensional tank game with enemy AI, power-ups, and a final boss tank that must be defeated in order to win the game.
                                         </p>
-                                        <a class="mt-auto btn btn-danger" href="/Home/About">Learn More</a>
+                                        <hr/>
+                                        <small><em><strong>C++ / Qt</strong></em></small>
+                                        <div class="d-flex justify-content-between pt-2">
+                                            <a class="mt-auto btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleBunkerBlitz">Learn More</a>
+                                            <small class="">
+                                                <div>
+                                                    <i class="fas fa-user text-white"></i>
+                                                    Group of 5
+                                                </div>
+                                                <div>
+                                                    <i class="fas fa-calendar-alt text-white"></i>
+                                                    Spring, 2023
+                                                </div>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleBunkerBlitz" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-8 col-lg-4">
+                                <div class="card selection bg-dark text-white text-start">
+                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1535025639604-9a804c092faa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6cb0ceb620f241feb2f859e273634393&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bunker Blitz</h5>
+                                        <p class="card-text">
+                                            Top-down, two-dimensional tank game with enemy AI, power-ups, and a final boss tank that must be defeated in order to win the game.
+                                        </p>
+                                        <hr/>
+                                        <small><em><strong>C++ / Qt</strong></em></small>
+                                        <div class="d-flex justify-content-between pt-2">
+                                            <a class="mt-auto btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleBunkerBlitz">Learn More</a>
+                                            <small class="">
+                                                <div>
+                                                    <i class="fas fa-user text-white"></i>
+                                                    Group of 5
+                                                </div>
+                                                <div>
+                                                    <i class="fas fa-calendar-alt text-white"></i>
+                                                    Spring, 2023
+                                                </div>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleBunkerBlitz" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-8 col-lg-4">
+                                <div class="card selection bg-dark text-white text-start">
+                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1535025639604-9a804c092faa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6cb0ceb620f241feb2f859e273634393&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bunker Blitz</h5>
+                                        <p class="card-text">
+                                            Top-down, two-dimensional tank game with enemy AI, power-ups, and a final boss tank that must be defeated in order to win the game.
+                                        </p>
+                                        <hr/>
+                                        <small><em><strong>C++ / Qt</strong></em></small>
+                                        <div class="d-flex justify-content-between pt-2">
+                                            <a class="mt-auto btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleBunkerBlitz">Learn More</a>
+                                            <small class="">
+                                                <div>
+                                                    <i class="fas fa-user text-white"></i>
+                                                    Group of 5
+                                                </div>
+                                                <div>
+                                                    <i class="fas fa-calendar-alt text-white"></i>
+                                                    Spring, 2023
+                                                </div>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleBunkerBlitz" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-8 col-lg-4">
+                                <div class="card selection bg-dark text-white text-start">
+                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1535025639604-9a804c092faa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6cb0ceb620f241feb2f859e273634393&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bunker Blitz</h5>
+                                        <p class="card-text">
+                                            Top-down, two-dimensional tank game with enemy AI, power-ups, and a final boss tank that must be defeated in order to win the game.
+                                        </p>
+                                        <hr/>
+                                        <small><em><strong>C++ / Qt</strong></em></small>
+                                        <div class="d-flex justify-content-between pt-2">
+                                            <a class="mt-auto btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleBunkerBlitz">Learn More</a>
+                                            <small class="">
+                                                <div>
+                                                    <i class="fas fa-user text-white"></i>
+                                                    Group of 5
+                                                </div>
+                                                <div>
+                                                    <i class="fas fa-calendar-alt text-white"></i>
+                                                    Spring, 2023
+                                                </div>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleBunkerBlitz" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-8 col-lg-4">
+                                <div class="card selection bg-dark text-white text-start">
+                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1535025639604-9a804c092faa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6cb0ceb620f241feb2f859e273634393&auto=format&fit=crop&w=500&q=80" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bunker Blitz</h5>
+                                        <p class="card-text">
+                                            Top-down, two-dimensional tank game with enemy AI, power-ups, and a final boss tank that must be defeated in order to win the game.
+                                        </p>
+                                        <hr/>
+                                        <small><em><strong>C++ / Qt</strong></em></small>
+                                        <div class="d-flex justify-content-between pt-2">
+                                            <a class="mt-auto btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#exampleBunkerBlitz">Learn More</a>
+                                            <small class="">
+                                                <div>
+                                                    <i class="fas fa-user text-white"></i>
+                                                    Group of 5
+                                                </div>
+                                                <div>
+                                                    <i class="fas fa-calendar-alt text-white"></i>
+                                                    Spring, 2023
+                                                </div>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleBunkerBlitz" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -201,7 +514,9 @@
 
                         
                         <button class="bg-dark" data-bs-toggle="collapse" data-bs-target="#card-collapse" aria-expanded="false" aria-controls="card-collapse" 
-                            style="padding: 15px;
+                            style="
+                                color: white;
+                                padding: 15px;
                                 font-size: 18px;
                                 border: 1px;
                                 border-radius: 3px;
