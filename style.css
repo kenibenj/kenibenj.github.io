@@ -102,6 +102,23 @@ body::before
     content: '  ';
 }
 
+.modal-title{
+    font-family: 'Ubuntu Mono', sans-serif;
+    font-size: 1.2vw;
+    white-space: pre;
+}
+
+.modal-title::after{
+    content: '|';
+    animation: blink 1s infinite;
+    opacity: 0%;
+}
+
+.modal-title::before{
+    content: '  ';
+}
+
+
  .main{
     font-family: 'Ubuntu Mono', sans-serif;
     font-size: 2.6vw;
@@ -195,6 +212,14 @@ body::before
     outline: 5px solid black;
     outline-offset: 0px;
     border-radius: 50%;
+}
+
+.image-normal{
+    opacity: 100%;
+    transition: .05s;
+    width: 47%;
+    outline: 0px solid;
+    outline-offset: 0px;
 }
 
 .para-carousel{
@@ -319,6 +344,10 @@ footer{
     }
 
     .page-title{
+        font-size: x-large;
+    }
+
+    .modal-title{
         font-size: x-large;
     }
 
