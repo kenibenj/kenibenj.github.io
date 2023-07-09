@@ -43,6 +43,7 @@ function themeChanges(){
     var mergedCards = [...card, ...showMoreButton];
     var blackBorder = document.getElementsByClassName('black-border');
     var carousel = document.getElementsByClassName('carousel');
+    var cardHr = document.getElementsByClassName('card-hr');
 
     if (counter % 2 == 0) {
         sessionStorage.setItem("theme", "dark");
@@ -134,5 +135,8 @@ function themeChanges(){
             element.classList.add('carousel-dark');
         });
     }
+    Array.from(cardHr).forEach(function (element) {
+        element.style.color = 'white';
+    });
     counter++;
 }
