@@ -43,6 +43,17 @@
                 }                         
             );                  
         });
+
+        $(function() {
+            $("#cardTextQuest").hover(
+                function() {
+                    $("#imgTextQuest").attr("src", "images/TextQuest.gif");
+                },
+                function() {
+                    $("#imgTextQuest").attr("src", "images/TextQuest.png");
+                }                         
+            );                  
+        });
     </script>
 
 </head>
@@ -114,15 +125,15 @@
                             <div class="col-md-8 col-lg-4">
                                 <div class="card selection bg-dark text-white text-start h-100" id="cardBunkerBlitz">
                                     <a class="stretched-link d-sm-block d-md-none d-lg-none" data-bs-toggle="modal" data-bs-target="#modalBunkerBlitz"></a>
-                                    <img id="imgBunkerBlitz" class="card-img-top" src="images/tank.png" alt="Card image cap">
-                                    <div class="card-body">
+                                    <img id="imgBunkerBlitz" class="card-img-top card-image" src="images/tank.png" alt="Card image cap">
+                                    <div class="card-body d-flex flex-column">
                                         <h5 class="card-title">Bunker Blitz</h5>
                                         <p class="card-text">
                                             Top-down, two-dimensional tank game featuring enemy AI behavior, various power-ups, custom artwork, and a final boss tank that must be defeated in order to win the game.
                                         </p>
                                         <hr class="card-hr"/>
                                         <small><em><strong>C++ / Qt</strong></em></small>
-                                        <div class="d-flex justify-content-between pt-2">
+                                        <div class="d-flex justify-content-between pt-2 mt-auto">
                                             <a class="mt-auto btn btn-outline-light d-md-block d-none card-button" data-bs-toggle="modal" data-bs-target="#modalBunkerBlitz">Learn More</a>
                                             <small class="">
                                                 <div>
@@ -185,15 +196,15 @@
                             <div class="col-md-8 col-lg-4">
                                 <div class="card selection bg-dark text-white text-start h-100" id="cardDnd">
                                     <a class="stretched-link d-sm-block d-md-none d-lg-none" data-bs-toggle="modal" data-bs-target="#modalDnd"></a>
-                                    <img id="imgDnd" class="card-img-top" src="images/dnd.png" alt="Card image cap">
-                                    <div class="card-body">
+                                    <img id="imgDnd" class="card-img-top card-image" src="images/dnd.png" alt="Card image cap">
+                                    <div class="card-body d-flex flex-column">
                                         <h5 class="card-title">Dungeons &amp; Dragons Character Management System</h5>
                                         <p class="card-text">
                                             Web application that maintains a database of D&D characters which keeps track of basic stats, and allows users to create, view, edit, and delete these characters.
                                         </p>
                                         <hr class="card-hr"/>
                                         <small><em><strong>ASP.NET C# / SQL Server / Bootstrap CSS / JQuery Javascript</strong></em></small>
-                                        <div class="d-flex justify-content-between pt-2">
+                                        <div class="d-flex justify-content-between pt-2 mt-auto">
                                             <a class="mt-auto btn btn-outline-light d-md-block d-none card-button" data-bs-toggle="modal" data-bs-target="#modalDnd">Learn More</a>
                                             <small class="">
                                                 <div>
@@ -202,7 +213,7 @@
                                                 </div>
                                                 <div>
                                                     <i class="fas fa-calendar-alt text-white"></i>
-                                                    Fall, 2023
+                                                    Fall, 2022
                                                 </div>
                                             </small>
                                         </div>
@@ -232,13 +243,83 @@
                                             The database is in SQL Server with the backend using ADO.NET for communication to and from the database. 
                                             The frontend makes use of Bootstrap 5 and JQuery as I wanted to gain more experience using commonly seen libraries (I had mostly used vanilla CSS and Javascript before developing this site). 
                                             The D&D CMS is hosted on an AWS server using the IIS webserver. While all of the artwork used has been modified to suit the website's needs, very little of it besides the logo is originally mine. 
-                                            The art that I did edit/create was done so in Adobe Photoshop.
+                                            All artwork was edited/created in Adobe Photoshop.
                                         </p>
                                         <br>
                                         <p class="para">
-                                            This site received its last major update in early December 2022 and received an A grade from the professor. 
-                                            As its original vision has been fulfilled, the project is more or less complete.
-                                            That being said, one day I may go back and add additional features and content to the site.
+                                            The site received its last major update in early December 2022 and received an A grade from the professor. 
+                                            As its original vision has been fulfilled, the project is more or less complete and can be visited at <a href="https://dnd.kenibenj.com/">dnd.kenibenj.com</a>.
+                                            in the future I may go back and add additional features &amp; content to the site.
+                                            I will likely get a better domain name for the website instead of using a subdomain of my personal website should this occur.
+                                        <br>
+                                    </div>
+                                    <div class="modal-footer p-3 d-flex justify-content-between">
+                                        <a class="modal-icon" href="https://github.com/kenibenj/DnD-CMS"><i class="fa-brands fa-github"></i></a></li>
+                                        <a type="button" class="btn modal-button btn-dark" data-bs-dismiss="modal">Close</a>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Text Quest -->
+                            <div class="col-md-8 col-lg-4">
+                                <div class="card selection bg-dark text-white text-start h-100" id="cardTextQuest">
+                                    <a class="stretched-link d-sm-block d-md-none d-lg-none" data-bs-toggle="modal" data-bs-target="#modalTextQuest"></a>
+                                    <img id="imgTextQuest" class="card-img-top card-image" src="images/TextQuest.png" alt="Card image cap">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Text Quest</h5>
+                                        <p class="card-text">
+                                            A text-based adventure game with a GUI that includes picture graphics and sound effects. 
+                                            The player can fight enemies to gain XP, level up to gain more health, and earn gold to buy items from shops.
+                                        </p>
+                                        <hr class="card-hr"/>
+                                        <small><em><strong>Java</strong></em></small>
+                                        <div class="d-flex justify-content-between pt-2 mt-auto">
+                                            <a class="mt-auto btn btn-outline-light d-md-block d-none card-button" data-bs-toggle="modal" data-bs-target="#modalTextQuest">Learn More</a>
+                                            <small class="">
+                                                <div>
+                                                    <i class="fas fa-user text-white"></i>
+                                                    Individual
+                                                </div>
+                                                <div>
+                                                    <i class="fas fa-calendar-alt text-white"></i>
+                                                    Spring, 2022
+                                                </div>
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="modalTextQuest" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h3 class="modal-title" id="exampleModalLabel">Text Quest</h3>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-start">
+                                        <p class="para">
+                                            The D&D Customer Management System (CMS) is an online tool meant to assist Dungeons and Dragons players create, view, and store the various characters & creatures used in their campaigns. 
+                                            Developed for an informatics class in the Fall of 2022, this project was developed in order to gain skills and experience in the field of web development. 
+                                            It was encouraged to create an application relevant to an interest or hobby, and as I frequently play D&D I decided to base my site around it. 
+                                            The idea for a character management system was inspired by the customer managements systems used by businesses.
+                                        </p>
+                                        <br>
+                                        <img class="img-fluid mx-auto float-sm-start me-4 mb-1 black-border image-normal "  src="images/TextQuest.gif" />
+                                        <p class="para">
+                                            This website is built using the ASP.NET MVC Core framework in C#. 
+                                            The database is in SQL Server with the backend using ADO.NET for communication to and from the database. 
+                                            The frontend makes use of Bootstrap 5 and JQuery as I wanted to gain more experience using commonly seen libraries (I had mostly used vanilla CSS and Javascript before developing this site). 
+                                            The D&D CMS is hosted on an AWS server using the IIS webserver. While all of the artwork used has been modified to suit the website's needs, very little of it besides the logo is originally mine. 
+                                            All artwork was edited/created in Adobe Photoshop.
+                                        </p>
+                                        <br>
+                                        <p class="para">
+                                            The site received its last major update in early December 2022 and received an A grade from the professor. 
+                                            As its original vision has been fulfilled, the project is more or less complete and can be visited at <a href="https://dnd.kenibenj.com/">dnd.kenibenj.com</a>.
+                                            in the future I may go back and add additional features &amp; content to the site.
                                             I will likely get a better domain name for the website instead of using a subdomain of my personal website should this occur.
                                         <br>
                                     </div>
