@@ -327,8 +327,17 @@ footer{
 
 .card-image{
     width: 100%;
-    height: 22vh;
+    height: 20vh;
     object-fit: cover;
+}
+
+.stars {
+    text-align: center;
+    font-size: x-large;
+}
+
+.star {
+    filter: drop-shadow(0 .05em .05em black);
 }
 
 
