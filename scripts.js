@@ -6,6 +6,7 @@ $(window).on("load", function () {
     var theme = sessionStorage.getItem("theme"); // Tracks what theme has been used so far
     if (theme == "dark"){
         themeChanges();
+        changeLoaderTheme();
     }
 });
 
@@ -14,19 +15,23 @@ $(window).on("load", function () {
 var counter = 0;
 function switchTheme() {
     var loader = document.getElementsByClassName('loader');
+    changeLoaderTheme();
+
+    $(".loader").fadeIn("medium", themeChanges);
+    $(".loader").fadeOut("medium");
+}
+
+function changeLoaderTheme(){
     if (counter % 2 == 0) {
-        Array.from(loader).forEach(function (element) {
-            element.style.background = 'white';
-        });
-    }
-    else{
         Array.from(loader).forEach(function (element) {
             element.style.background = 'black';
         });
     }
-
-    $(".loader").fadeIn("medium", themeChanges);
-    $(".loader").fadeOut("medium");
+    else{
+        Array.from(loader).forEach(function (element) {
+            element.style.background = 'white';
+        });
+    }
 }
 
 function themeChanges(){
