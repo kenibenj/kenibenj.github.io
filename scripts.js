@@ -13,6 +13,17 @@ $(window).on("load", function () {
 // Code for switching the background theme of the site
 var counter = 0;
 function switchTheme() {
+    var loader = document.getElementsByClassName('loader');
+    if (counter % 2 == 0) {
+        Array.from(loader).forEach(function (element) {
+            element.style.background = 'white';
+        });
+    }
+    else{
+        Array.from(loader).forEach(function (element) {
+            element.style.background = 'black';
+        });
+    }
 
     $(".loader").fadeIn("medium", themeChanges);
     $(".loader").fadeOut("medium");
@@ -60,7 +71,6 @@ function themeChanges(){
             element.style.borderColor = 'white';
             element.style.outlineColor = 'white';
         });
-
         Array.from(mergedInput).forEach(function (element) {
             element.addEventListener("focus", function () {
                 this.style.filter = 'drop-shadow(0 0 .15em white)';
@@ -69,7 +79,6 @@ function themeChanges(){
                 this.style.filter = 'none';
             });
         });
-
         Array.from(modal).forEach(function (element) {
             element.classList.add('bg-dark');
         });
@@ -111,7 +120,6 @@ function themeChanges(){
             element.style.borderColor = 'black';
             element.style.outlineColor = 'black';
         });
-
         Array.from(mergedInput).forEach(function (element) {
             element.addEventListener("focus", function () {
                 this.style.filter = 'drop-shadow(0 0 .1em black)';
@@ -120,11 +128,9 @@ function themeChanges(){
                 this.style.filter = 'none';
             });
         });
-
         Array.from(modal).forEach(function (element) {
             element.classList.remove('bg-dark');
         });
-
         Array.from(modalButton).forEach(function (element) {
             element.classList.add('btn-dark');
             element.classList.remove('btn-light');
