@@ -44,6 +44,8 @@ function themeChanges(){
     var blackBorder = document.getElementsByClassName('black-border');
     var carousel = document.getElementsByClassName('carousel');
     var cardHr = document.getElementsByClassName('card-hr');
+    var dateTheme = document.getElementsByClassName('date-theme');
+    var btnClose = document.getElementsByClassName('btn-close');
 
     if (counter % 2 == 0) {
         sessionStorage.setItem("theme", "dark");
@@ -78,6 +80,9 @@ function themeChanges(){
         Array.from(modalIcon).forEach(function (element) {
             element.style.color = 'white';
         });
+        Array.from(dateTheme).forEach(function (element) {
+            element.style.color = 'white';
+        });
         Array.from(mergedCards).forEach(function (element) {
             element.classList.add('bg-black');
             element.classList.remove('bg-dark');
@@ -87,6 +92,9 @@ function themeChanges(){
         });
         Array.from(carousel).forEach(function (element) {
             element.classList.remove('carousel-dark');
+        });
+        Array.from(btnClose).forEach(function (element) {
+            element.classList.add('btn-close-white');
         });
     }
 
@@ -124,6 +132,9 @@ function themeChanges(){
         Array.from(modalIcon).forEach(function (element) {
             element.style.color = 'black';
         });
+        Array.from(dateTheme).forEach(function (element) {
+            element.style.color = 'black';
+        });
         Array.from(mergedCards).forEach(function (element) {
             element.classList.add('bg-dark');
             element.classList.remove('bg-black');
@@ -133,6 +144,9 @@ function themeChanges(){
         });
         Array.from(carousel).forEach(function (element) {
             element.classList.add('carousel-dark');
+        });
+        Array.from(btnClose).forEach(function (element) {
+            element.classList.remove('btn-close-white');
         });
     }
     Array.from(cardHr).forEach(function (element) {
