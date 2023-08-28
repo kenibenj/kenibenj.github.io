@@ -6,7 +6,6 @@ $(window).on("load", function () {
     var theme = sessionStorage.getItem("theme"); // Tracks what theme has been used so far
     if (theme == "dark"){
         themeChanges();
-        changeLoaderTheme();
     }
 });
 
@@ -14,24 +13,9 @@ $(window).on("load", function () {
 // Code for switching the background theme of the site
 var counter = 0;
 function switchTheme() {
-    var loader = document.getElementsByClassName('loader');
-    changeLoaderTheme();
 
     $(".loader").fadeIn("medium", themeChanges);
     $(".loader").fadeOut("medium");
-}
-
-function changeLoaderTheme(){
-    if (counter % 2 == 0) {
-        Array.from(loader).forEach(function (element) {
-            element.style.background = 'black';
-        });
-    }
-    else{
-        Array.from(loader).forEach(function (element) {
-            element.style.background = 'white';
-        });
-    }
 }
 
 function themeChanges(){
@@ -62,6 +46,7 @@ function themeChanges(){
     var cardHr = document.getElementsByClassName('card-hr');
     var dateTheme = document.getElementsByClassName('date-theme');
     var btnClose = document.getElementsByClassName('btn-close');
+    var loader = document.getElementsByClassName('loader');
 
     if (counter % 2 == 0) {
         sessionStorage.setItem("theme", "dark");
@@ -76,6 +61,7 @@ function themeChanges(){
             element.style.borderColor = 'white';
             element.style.outlineColor = 'white';
         });
+
         Array.from(mergedInput).forEach(function (element) {
             element.addEventListener("focus", function () {
                 this.style.filter = 'drop-shadow(0 0 .15em white)';
@@ -84,6 +70,7 @@ function themeChanges(){
                 this.style.filter = 'none';
             });
         });
+
         Array.from(modal).forEach(function (element) {
             element.classList.add('bg-dark');
         });
@@ -110,6 +97,9 @@ function themeChanges(){
         Array.from(btnClose).forEach(function (element) {
             element.classList.add('btn-close-white');
         });
+                Array.from(btnClose).forEach(function (element) {
+            element.classList.add('btn-close-white');
+        });
     }
 
     else {
@@ -125,6 +115,7 @@ function themeChanges(){
             element.style.borderColor = 'black';
             element.style.outlineColor = 'black';
         });
+
         Array.from(mergedInput).forEach(function (element) {
             element.addEventListener("focus", function () {
                 this.style.filter = 'drop-shadow(0 0 .1em black)';
@@ -133,9 +124,11 @@ function themeChanges(){
                 this.style.filter = 'none';
             });
         });
+
         Array.from(modal).forEach(function (element) {
             element.classList.remove('bg-dark');
         });
+
         Array.from(modalButton).forEach(function (element) {
             element.classList.add('btn-dark');
             element.classList.remove('btn-light');
