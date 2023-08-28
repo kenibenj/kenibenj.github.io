@@ -364,6 +364,9 @@ footer{
 
     .modal-title{
         font-size: x-large;
+        white-space: normal;
+        overflow: visible;
+        text-align: center;
     }
 
     .main{
