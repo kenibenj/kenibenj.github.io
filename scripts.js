@@ -46,6 +46,7 @@ function themeChanges(){
     var cardHr = document.getElementsByClassName('card-hr');
     var dateTheme = document.getElementsByClassName('date-theme');
     var btnClose = document.getElementsByClassName('btn-close');
+    var loader = document.getElementsByClassName('loader');
 
     if (counter % 2 == 0) {
         sessionStorage.setItem("theme", "dark");
@@ -94,6 +95,9 @@ function themeChanges(){
             element.classList.remove('carousel-dark');
         });
         Array.from(btnClose).forEach(function (element) {
+            element.classList.add('btn-close-white');
+        });
+                Array.from(btnClose).forEach(function (element) {
             element.classList.add('btn-close-white');
         });
     }

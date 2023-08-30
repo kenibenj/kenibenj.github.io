@@ -104,7 +104,7 @@ body::before
 
 .modal-title{
     font-family: 'Ubuntu Mono', sans-serif;
-    font-size: 1.2vw;
+    font-size: x-large;
     white-space: pre;
 }
 
@@ -364,6 +364,9 @@ footer{
 
     .modal-title{
         font-size: x-large;
+        white-space: normal;
+        overflow: visible;
+        text-align: center;
     }
 
     .main{
