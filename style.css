@@ -17,6 +17,37 @@ body::before
     height: 60px;
 }
 
+::selection {
+    background: black;
+    color: white;
+}
+
+/* For Firefox */
+::-moz-selection {
+    background: black;
+    color: white;
+}
+
+nav ::selection{
+    background: white;
+    color: black;
+}
+
+nav ::-moz-selection{
+    background: white;
+    color: black;
+}
+
+footer ::selection{
+    background: white;
+    color: black;
+}
+
+footer ::-moz-selection{
+    background: white;
+    color: black;
+}
+
 .nav-link{
     font-size: large;
     font-family: 'Ubuntu Mono', sans-serif;
@@ -29,7 +60,7 @@ body::before
 
 .nav-custom:hover{
     opacity: 60%;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .nav-custom::after{
@@ -54,7 +85,7 @@ body::before
 .circle-animation-hover:hover{
     outline-offset: 70px;
     transform: rotate(8deg);
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .link-selected{
@@ -135,9 +166,9 @@ body::before
 
  }
 
- .main:hover{
-    cursor: pointer;
- }
+ .main a:hover{
+    opacity: 60% !important;
+}
 
  .main:hover::after{
     opacity: 0%;
@@ -163,11 +194,11 @@ body::before
 
 .social-items a:hover{
     opacity: 60%;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .footer-button {
-    cursor: default;
+    /* cursor: pointer; */
 }
 
 .bi {
@@ -176,7 +207,7 @@ body::before
 
 .bi:hover {
     opacity: 60%;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .background {
@@ -208,7 +239,7 @@ body::before
 .image-selector:hover{
     border: 0px solid black;
     opacity: 70%;
-    cursor: pointer;
+    /* cursor: pointer; */
     outline: 5px solid black;
     outline-offset: 0px;
     border-radius: 50%;
@@ -242,7 +273,7 @@ a {
 }
 
 .para a:hover{
-    cursor: pointer;
+    /* cursor: pointer; */
     opacity: 60%;
 }
 
@@ -259,7 +290,7 @@ a {
 
 .icon:hover{
     opacity: 60%;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 
@@ -322,7 +353,7 @@ footer{
 
 .modal-icon:hover{
     opacity: 60%;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .card-image{

@@ -1,5 +1,10 @@
 // Benjamin Keninger 2023
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.body.style.cursor = 'url("/images/cursor-auto.png"), auto';
+});
+
+
 $(window).on("load", function () {
     $(".loader").fadeOut("medium"); // Fade-in Effect when page is loaded
 
@@ -7,6 +12,26 @@ $(window).on("load", function () {
     if (theme == "dark"){
         themeChanges();
     }
+});
+
+
+$(document).ready(function() {
+    $('a').click(function(event) {
+        // Get the href attribute of the clicked link
+        var href = $(this).attr('href');
+
+        // Ignore links that just link to "#"
+        if (href === '#' || href.startsWith('#')) {
+            return;
+        }
+
+        event.preventDefault(); // Prevent default link behavior
+
+        // Fade in the overlay and navigate to the href after the fade-in
+        $(".loader").fadeIn(200, function() {
+            window.location.href = href;
+        });
+    });
 });
 
 
