@@ -1,7 +1,9 @@
 // Benjamin Keninger 2023
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    document.body.style.cursor = 'url("/images/cursor-auto.png"), auto';
+    //document.body.style.cursor = 'url("/images/cursor-auto.png"), auto';
+    document.documentElement.style.cursor = 'url("/images/cursor-auto.png"), auto';
+
 });
 
 
