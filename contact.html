@@ -27,7 +27,7 @@
     <!-- NavBar-->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: black; box-shadow: 0px 4px 4px 2px rgb(50,50,50, .3);">
         <div class="container-fluid mx-3 ">
-            <a href="https://kenibenj.com/" class="navbar-brand" style="cursor: default;"><img width="60" height="60" src="images/newGram full transparent (white no border).png" class="nav-custom circle-animation-hover" alt="" /></a>
+            <a href="https://kenibenj.com/" class="navbar-brand"><img width="60" height="60" src="images/newGram full transparent (white no border).png" class="nav-custom circle-animation-hover" alt="" /></a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
@@ -78,16 +78,16 @@
                     <form onsubmit="sweetAlertFunction()" class="d-flex flex-column" id="form" action="https://formsubmit.co/78cd743b9e91d1f1c3807256e6600a28" method="POST">
 
                         <label class="text-start"  for="name">Name <span>(required)</span></label>
-                        <input class=" mb-4 mt-2 p-3" id="name" type="text" name="name" placeholder="John Smith" required />
+                        <input class=" mb-4 mt-2 p-3" id="name" type="text" name="name" placeholder="John Smith" required autocomplete="off"/>
 
                         <label class="text-start" for="email">Email <span>(required)</span></label>
-                        <input class=" mb-4 mt-2 p-3" id="email" type="email" name="email" placeholder="your@email.com" required />
+                        <input class=" mb-4 mt-2 p-3" id="email" type="email" name="email" placeholder="your@email.com" required autocomplete="off"/>
 
                         <label class="text-start" for="phone">Phone</label>
-                        <input class=" mb-4 mt-2 p-3" id="phone" type="text" name="phone" placeholder="123-456-7890" />
+                        <input class=" mb-4 mt-2 p-3" id="phone" type="text" name="phone" placeholder="123-456-7890" autocomplete="off"/>
 
                         <label class="text-start" for="message">Message <span>(required)</span></label>
-                        <textarea class="mb-4 mt-2 p-3" id="message" rows="6" type="text" name="message" placeholder="Hello World!" required></textarea>
+                        <textarea class="mb-4 mt-2 p-3" id="message" rows="6" type="text" name="message" placeholder="Hello World!" required autocomplete="off"></textarea>
 
                         <input type="hidden" name="_subject" value="New Website Contact!">
                         <input type="hidden" name="_captcha" value="true">

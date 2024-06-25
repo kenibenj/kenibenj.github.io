@@ -5,24 +5,14 @@
     scrollbar-arrow-color: #777;
 }
 
-html::-webkit-scrollbar{
-    width: 10px;
-}
-
-html::-webkit-scrollbar-thumb{
-    background-color: red;
-}
-
-html::-webkit-scrollbar-track{
-    background-color: red;
-}
-
 body {
     min-height: 100vh;
     background: linear-gradient(to right top, rgb(201,201,201), white 70%);
     background-attachment: fixed;
     font-family: 'Ubuntu Mono', sans-serif;
     background-repeat: no-repeat;
+    cursor: url('images/cursor-auto.png'), auto;
+
 }
 
 body::before
@@ -32,6 +22,9 @@ body::before
     height: 60px;
 }
 
+label{
+    cursor: url('images/cursor-auto.png'), auto;
+}
 
 ::selection {
     background: black;
@@ -76,7 +69,6 @@ footer ::-moz-selection{
 
 .nav-custom:hover{
     opacity: 60%;
-    /* cursor: pointer; */
 }
 
 .nav-custom::after{

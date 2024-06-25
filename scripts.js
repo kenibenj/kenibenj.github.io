@@ -1,12 +1,5 @@
 // Benjamin Keninger 2023
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    //document.body.style.cursor = 'url("/images/cursor-auto.png"), auto';
-    document.documentElement.style.cursor = 'url("/images/cursor-auto.png"), auto';
-
-});
-
-
 $(window).on("load", function () {
     $(".loader").fadeOut("medium"); // Fade-in Effect when page is loaded
 
