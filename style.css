@@ -218,15 +218,50 @@ footer ::-moz-selection{
     /* cursor: pointer; */
 }
 
-.background {
-    background-image: url(images/newGram\ full\ transparent\(Background\).png);
+.background::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 100%;
+    background: radial-gradient(#FFFFFF00, rgb(201,201,201));
+}
+
+.background::before{
+    content: "";
+    position: absolute;
+    width: 148%; /* Ensure the image covers the container */
+    height: 150%;
+    background-image: url(images/newGram\ full\ transparent\(Background\).png); /* Replace with your background image URL */    background-position-y: 0vh;
     background-size: 120vh;
     background-repeat: no-repeat;
-    background-position-y: 0vh;
-    background-position-x: 45vw;
     min-height: 85vh;
-    overflow: hidden;
-    transition: .15s;
+    background-position: center;
+    animation: rotateBackground linear 400s infinite; /* Adjust the duration as needed */
+    overflow: visible;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    height: 85vh; /* Adjust as needed */
+    overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+}
+
+@keyframes rotateBackground {
+    0% {
+    transform: rotate(0deg);
+    }
+    25% {
+    transform: rotate(360deg);
+    }
+    75% {
+    transform: rotate(-360deg);
+    }
+    100% {
+    transform: rotate(0deg);
+    }
 }
 
 .black-border{
