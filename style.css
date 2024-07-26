@@ -12,8 +12,8 @@ body {
     font-family: 'Ubuntu Mono', sans-serif;
     background-repeat: no-repeat;
     cursor: url('images/cursor-auto.png'), auto;
-
 }
+
 
 body::before
 {
@@ -87,11 +87,11 @@ footer ::-moz-selection{
     outline: 3px solid white;
     outline-offset: 2px;
     border-radius: 50%;
-    transition: 0.8s;
+    transition: 0.15s;
 }
 
 .circle-animation-hover:hover{
-    outline-offset: 70px;
+    outline-offset: 8px;
     transform: rotate(8deg);
     /* cursor: pointer; */
 }
@@ -171,11 +171,13 @@ footer ::-moz-selection{
  .main a::after{
     content: "|";
     opacity: 0%;
-
  }
 
  .main a:hover{
-    opacity: 60% !important;
+    display: inline-block; 
+    opacity: 50% !important;
+    transform: translateY(-3px) !important;
+    transition: .15s;
 }
 
  .main:hover::after{
@@ -218,49 +220,64 @@ footer ::-moz-selection{
     /* cursor: pointer; */
 }
 
-.background::after{
-    content: '';
+.background-logo{
+    top: 60vh;
+    left: 75vw;
+    min-height: 85vh;
+    pointer-events: none;
+    animation: rotateLogo 200s linear infinite; /* Adjust the duration as needed */
     position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    height: 100%;
-    background: radial-gradient(#FFFFFF00, rgb(201,201,201));
+    height: 125%;
+    z-index: -10;
 }
 
-.background::before{
-    content: "";
-    position: absolute;
-    width: 148%; /* Ensure the image covers the container */
-    height: 150%;
-    background-image: url(images/newGram\ full\ transparent\(Background\).png); /* Replace with your background image URL */    background-position-y: 0vh;
-    background-size: 120vh;
-    background-repeat: no-repeat;
-    min-height: 85vh;
-    background-position: center;
-    animation: rotateBackground linear 400s infinite; /* Adjust the duration as needed */
-    overflow: visible;
+.wrapper{
+    overflow: hidden; 
+    position: relative;
+    background: radial-gradient(circle, transparent 20%, rgb(201,201,201) 100%);
+}
+
+@keyframes rotateLogo {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
 
 .background {
-    position: relative;
-    width: 100%;
-    height: 85vh; /* Adjust as needed */
-    overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+    background-size: 120vh;
+    background-repeat: no-repeat;
+    background-position-y: 0vh;
+    background-position-x: 45vw;
+    min-height: 85vh;
+    overflow: hidden;
+    transition: .15s;
 }
 
-@keyframes rotateBackground {
-    0% {
-    transform: rotate(0deg);
+.static-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    inset: -200%;
+    background-size:contain;
+    overflow: auto;
+    background: url(images/image.png);
+    opacity: 4%;
+    z-index: 200;
+    animation: shift .25s linear infinite both;
+    pointer-events: none;
+}
+
+@keyframes shift {
+    0%{
+        transform: translateX(10%) translateY(10%);
     }
-    25% {
-    transform: rotate(360deg);
-    }
-    75% {
-    transform: rotate(-360deg);
-    }
-    100% {
-    transform: rotate(0deg);
+    100%{
+        transform: translateX(-10%) translateY(-10%);
     }
 }
 
