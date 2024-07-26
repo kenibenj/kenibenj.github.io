@@ -74,7 +74,7 @@
     <!-- NavBar-->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: black; box-shadow: 0px 4px 4px 2px rgb(50,50,50, .3);">
         <div class="container-fluid mx-3 ">
-            <a href="https://kenibenj.com/" class="navbar-brand"><img width="60" height="60" src="images/newGram full transparent (white no border).png" class="nav-custom circle-animation-hover" alt="" /></a>
+            <a href="" class="navbar-brand"><img width="60" height="60" src="images/newGram full transparent (white no border).png" id="faucet-icon" class="nav-custom circle-animation-hover" alt="" /></a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
@@ -88,7 +88,7 @@
                         <a href="https://kenibenj.com/" class="nav-link nav-custom">Home</a>
                     </li>
                     <li class="nav-item mx-1">
-                        <a href="code" class="nav-link nav-custom link-selected">Code</a>
+                        <a href="code" class="nav-link nav-custom link-selected">Work</a>
                     </li>
                     <li class="nav-item mx-1">
                         <a href="blogMedia" class="nav-link nav-custom">Blog &amp; Media</a>
@@ -102,9 +102,9 @@
                 </ul>
 
                 <!-- Theme Change Button -->
-                <ul class="navbar-nav d-flex ms-auto icon-div">
-                    <li class="nav-itdem mx-1 d-flex" onclick="switchTheme()">
-                        <span id="sun" class="icon bi bi-sun"></span>
+                <ul class="navbar-nav d-flex ms-auto icon-div" >
+                    <li class="nav-item mx-1 d-flex" onclick="switchTheme()">
+                        <span id="sun" class="icon bi bi-sun" ></span>
                     </li>
                 </ul>
             </div>
@@ -112,535 +112,527 @@
     </nav>
 
     <!-- Content -->
-    <section class="p-5 background" >
-        <div class="container py-md-5 py-3 text-center text-md-start">
-            <div class="row px-md-5">
-                <h1 class="page-title pb-sm-3">Code</h1>
-                <div class="col-md">
-                    <p class="para">
-                        Unlike a lot of my peers in university, my history with programming has been relatively brief; the first real experience I had with coding was an intro to Python class I took in my senior year of high school - only about 4 years ago. 
-                        This has its drawbacks, of course, but it does give me the unique chance to document and display my journey from a near-beginner to a full-fledged software engineer. 
-                        While I obviously won't talk about every line of code I have ever written, I would like to show off some of the projects I have worked on, both academic and personal, in addition to giving brief discussions of my thoughts during and after the development cycle. 
-                        A more complete list of my work can be found on my Github.
-                    </p>
-                    <p class="para">
-                        This is a living webpage; I will add projects as I deem them fit to be documented.
-                    </p>
-                    <hr class="pb-3" />
-                    <div class="container text-center">
-                        <div class="row g-4 text-center pt-5 pb-4">
- 
-                            <!-- Bunker Blitz -->
-                            <div class="col-lg-4">
-                                <div class="card selection bg-dark text-white text-start h-100" id="cardBunkerBlitz">
-                                    <a class="stretched-link d-sm-block d-md-none d-lg-none" data-bs-toggle="modal" data-bs-target="#modalBunkerBlitz"></a>
-                                    <img id="imgBunkerBlitz" class="card-img-top card-image" src="images/tank.png" alt="Card image cap">
-                                    <div class="card-body d-flex flex-column">
-                                        <h5 class="card-title">Bunker Blitz</h5>
-                                        <p class="card-text">
-                                            Top-down, two-dimensional tank game featuring enemy AI behavior, various power-ups, custom artwork, and a final boss tank that must be defeated in order to win the game.
-                                        </p>
-                                        <hr class="card-hr"/>
-                                        <small><em><strong>C++ / Qt</strong></em></small>
-                                        <div class="d-flex justify-content-between pt-2 mt-auto">
-                                            <a class="mt-auto btn btn-outline-light d-md-block d-none card-button" data-bs-toggle="modal" data-bs-target="#modalBunkerBlitz">Learn More</a>
-                                            <small class="">
-                                                <div>
-                                                    <i class="fas fa-user text-white"></i>
-                                                    Group of 5
-                                                </div>
-                                                <div>
-                                                    <i class="fas fa-calendar-alt text-white"></i>
-                                                    Spring, 2023
-                                                </div>
-                                            </small>
+    <div class="wrapper">
+        <img src="images/newGram full transparent(Background).png" class="background-logo">
+        <section class="p-5 " >
+            <div class="container py-md-5 py-3 text-center text-md-start">
+                <div class="row px-md-5">
+                    <h1 class="page-title pb-sm-3">Code</h1>
+                    <div class="col-md">
+                        <p class="para">
+                            Unlike a lot of my peers in university, my history with programming has been relatively brief; the first real experience I had with coding was an intro to Python class I took in my senior year of high school - only about 4 years ago. 
+                            This has its drawbacks, of course, but it does give me the unique chance to document and display my journey from a near-beginner to a full-fledged software engineer. 
+                            While I obviously won't talk about every line of code I have ever written, I would like to show off some of the projects I have worked on, both academic and personal, in addition to giving brief discussions of my thoughts during and after the development cycle. 
+                            A more complete list of my work can be found on my Github.
+                        </p>
+                        <p class="para">
+                            This is a living webpage; I will add projects as I deem them fit to be documented.
+                        </p>
+                        <hr class="pb-3" />
+                        <div class="container text-center">
+                            <div class="row g-4 text-center pt-5 pb-4">
+
+                                <!-- Bunker Blitz -->
+                                <div class="col-lg-4">
+                                    <div class="card selection bg-dark text-white text-start h-100" id="cardBunkerBlitz">
+                                        <a class="stretched-link d-sm-block d-md-none d-lg-none" data-bs-toggle="modal" data-bs-target="#modalBunkerBlitz"></a>
+                                        <img id="imgBunkerBlitz" class="card-img-top card-image" src="images/tank.png" alt="Card image cap">
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title">Bunker Blitz</h5>
+                                            <p class="card-text">
+                                                Top-down, two-dimensional tank game featuring enemy AI behavior, various power-ups, custom artwork, and a final boss tank that must be defeated in order to win the game.
+                                            </p>
+                                            <hr class="card-hr"/>
+                                            <small><em><strong>C++ / Qt</strong></em></small>
+                                            <div class="d-flex justify-content-between pt-2 mt-auto">
+                                                <a class="mt-auto btn btn-outline-light d-md-block d-none card-button" data-bs-toggle="modal" data-bs-target="#modalBunkerBlitz">Learn More</a>
+                                                <small class="">
+                                                    <div>
+                                                        <i class="fas fa-user text-white"></i>
+                                                        Group of 5
+                                                    </div>
+                                                    <div>
+                                                        <i class="fas fa-calendar-alt text-white"></i>
+                                                        Spring, 2023
+                                                    </div>
+                                                </small>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!-- Modal -->
-                            <div class="modal fade" id="modalBunkerBlitz" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-xl">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h3 class="modal-title" id="exampleModalLabel">Bunker Blitz</h3>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body text-start">
-                                        <p class="para">
-                                            'Bunker Blitz' served as the final capstone project for my computer science degree, representing my group's attempt at recreating a retro-themed tank game. 
-                                            With near-complete freedom to choose our own implementation, my team of 5 had full creative control over the projects look and feel, as well as most of the gameplay decisions. 
-                                            The final game boasts a multitude of features, including diverse enemy AI behavior, various power-ups for the player, and a game-progression system culminating in an epic showdown against a boss tank. 
-                                            It even has customized visuals and audio!
-                                            'Bunker Blitz' stands as the most comprehensive game I have contributed to.
-                                        </p>
-                                        <br class="d-none d-sm-block">
-                                        <img class="img-fluid mx-auto float-sm-start me-4 mb-1 black-border image-normal d-none d-sm-block" src="images/tank.gif" />
-                                        <p class="para">
-                                            Implemented in C++, 'Bunker Blitz' marked my first real dive into lower-level languages, including concepts such as manual memory management &amp; garbage collection. 
-                                            Qt, a powerful graphical user interface tool, handled the graphics and logic seamlessly, essentially transforming the game into an immensely interactive UI.
-                                        </p>
-                                        <br class="d-none d-sm-block">
-                                        <p class="para">
-                                            My role in this project expanded significantly compared to previous group assignments from past semesters. 
-                                            Not only did I contribute extensively to the design and implementation of most game features, but I also assumed the responsibility of ensuring our project aligned with the professor's expectations. 
-                                            This involved coordinating meetings, maintaining email correspondence, and creating progress reports all aimed at impressing the professor with our game. 
-                                            Ultimately, our efforts paid off as 'Bunker Blitz' received an A grade.
-                                        </p>
-                                        <br class="d-none d-sm-block">
-                                        <p class="para">
-                                            Funnily enough, there aren't any bunkers in the game.
-                                        </p>
-                                    </div>
-                                    <div class="modal-footer p-3 d-flex justify-content-between">
-                                        <a class="modal-icon" href="https://github.com/kenibenj/CS4488TeamTank"><i class="fa-brands fa-github"></i></a></li>
-                                        <a type="button" class="btn modal-button btn-dark" data-bs-dismiss="modal">Close</a>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- dnd.kenibenj.com -->
-                            <div class=" col-lg-4">
-                                <div class="card selection bg-dark text-white text-start h-100" id="cardDnd">
-                                    <a class="stretched-link d-sm-block d-md-none d-lg-none" data-bs-toggle="modal" data-bs-target="#modalDnd"></a>
-                                    <img id="imgDnd" class="card-img-top card-image" src="images/dnd.png" alt="Card image cap">
-                                    <div class="card-body d-flex flex-column">
-                                        <h5 class="card-title">Dungeons &amp; Dragons Character Management System</h5>
-                                        <p class="card-text">
-                                            Web application that maintains a database of D&D characters which keeps track of basic stats, and allows users to create, view, edit, and delete these characters.
-                                        </p>
-                                        <hr class="card-hr"/>
-                                        <small><em><strong>ASP.NET C# / SQL Server / Bootstrap CSS / JQuery Javascript</strong></em></small>
-                                        <div class="d-flex justify-content-between pt-2 mt-auto">
-                                            <a class="mt-auto btn btn-outline-light d-md-block d-none card-button" data-bs-toggle="modal" data-bs-target="#modalDnd">Learn More</a>
-                                            <small class="">
-                                                <div>
-                                                    <i class="fas fa-user text-white"></i>
-                                                    Individual
-                                                </div>
-                                                <div>
-                                                    <i class="fas fa-calendar-alt text-white"></i>
-                                                    Fall, 2022
-                                                </div>
-                                            </small>
+                                <!-- Modal -->
+                                <div class="modal fade" id="modalBunkerBlitz" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-xl">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" id="exampleModalLabel">Bunker Blitz</h3>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <p class="para">
+                                                'Bunker Blitz' served as the final capstone project for my computer science degree, representing my group's attempt at recreating a retro-themed tank game. 
+                                                With near-complete freedom to choose our own implementation, my team of 5 had full creative control over the projects look and feel, as well as most of the gameplay decisions. 
+                                                The final game boasts a multitude of features, including diverse enemy AI behavior, various power-ups for the player, and a game-progression system culminating in an epic showdown against a boss tank. 
+                                                It even has customized visuals and audio!
+                                                'Bunker Blitz' stands as the most comprehensive game I have contributed to.
+                                            </p>
+                                            <br class="d-none d-sm-block">
+                                            <img class="img-fluid mx-auto float-sm-start me-4 mb-1 black-border image-normal d-none d-sm-block" src="images/tank.gif" />
+                                            <p class="para">
+                                                Implemented in C++, 'Bunker Blitz' marked my first real dive into lower-level languages, including concepts such as manual memory management &amp; garbage collection. 
+                                                Qt, a powerful graphical user interface tool, handled the graphics and logic seamlessly, essentially transforming the game into an immensely interactive UI.
+                                            </p>
+                                            <br class="d-none d-sm-block">
+                                            <p class="para">
+                                                My role in this project expanded significantly compared to previous group assignments from past semesters. 
+                                                Not only did I contribute extensively to the design and implementation of most game features, but I also assumed the responsibility of ensuring our project aligned with the professor's expectations. 
+                                                This involved coordinating meetings, maintaining email correspondence, and creating progress reports all aimed at impressing the professor with our game. 
+                                                Ultimately, our efforts paid off as 'Bunker Blitz' received an A grade.
+                                            </p>
+                                            <br class="d-none d-sm-block">
+                                            <p class="para">
+                                                Funnily enough, there aren't any bunkers in the game.
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer p-3 d-flex justify-content-between">
+                                            <a class="modal-icon" href="https://github.com/kenibenj/CS4488TeamTank"><i class="fa-brands fa-github"></i></a></li>
+                                            <a type="button" class="btn modal-button btn-dark" data-bs-dismiss="modal">Close</a>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!-- Modal -->
-                            <div class="modal fade" id="modalDnd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-xl">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h3 class="modal-title" id="exampleModalLabel">Dungeons &amp; Dragons Character Management System</h3>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body text-start">
-                                        <p class="para">
-                                            The D&D Customer Management System (CMS) is an online tool meant to assist Dungeons and Dragons players create, view, and store the various characters & creatures used in their campaigns. 
-                                            Developed for an informatics class in the Fall of 2022, this project was developed in order to gain skills and experience in the field of web development. 
-                                            It was encouraged to create an application relevant to an interest or hobby, and as I frequently play D&D I decided to base my site around it. 
-                                            The idea for a character management system was inspired by the customer managements systems used by businesses.
-                                        </p>
-                                        <br class="d-none d-sm-block">
-                                        <img class="img-fluid mx-auto float-sm-start me-4 mb-1 black-border image-normal d-none d-sm-block" src="images/dnd.gif" />
-                                        <p class="para">
-                                            This website is built using the ASP.NET MVC Core framework in C#. 
-                                            The database is in SQL Server with the backend using ADO.NET for communication to and from the database. 
-                                            The frontend makes use of Bootstrap 5 and JQuery as I wanted to gain more experience using commonly seen libraries (I had mostly used vanilla CSS and Javascript before developing this site). 
-                                            The D&D CMS is hosted on an AWS server using the IIS webserver. While all of the artwork used has been modified to suit the website's needs, very little of it besides the logo is originally mine. 
-                                            All artwork was edited/created in Adobe Photoshop.
-                                        </p>
-                                        <br class="d-none d-sm-block">
-                                        <p class="para">
-                                            The site received its last major update in early December 2022 and received an A grade from the professor. 
-                                            As its original vision has been fulfilled, the project is more or less complete and can be visited at <a href="https://dnd.kenibenj.com/">dnd.kenibenj.com</a>.
-                                            in the future I may go back and add additional features &amp; content to the site.
-                                            I will likely get a better domain name for the website instead of using a subdomain of my personal website should this occur.
-                                        <br class="d-none d-sm-block">
-                                    </div>
-                                    <div class="modal-footer p-3 d-flex justify-content-between">
-                                        <a class="modal-icon" href="https://github.com/kenibenj/DnD-CMS-Public"><i class="fa-brands fa-github"></i></a></li>
-                                        <a type="button" class="btn modal-button btn-dark" data-bs-dismiss="modal">Close</a>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Text Quest -->
-                            <div class="col-lg-4">
-                                <div class="card selection bg-dark text-white text-start h-100" id="cardTextQuest">
-                                    <a class="stretched-link d-sm-block d-md-none d-lg-none" data-bs-toggle="modal" data-bs-target="#modalTextQuest"></a>
-                                    <img id="imgTextQuest" class="card-img-top card-image" src="images/TextQuest.png" alt="Card image cap">
-                                    <div class="card-body d-flex flex-column">
-                                        <h5 class="card-title">Text Quest</h5>
-                                        <p class="card-text">
-                                            A text-based adventure game with a GUI that includes picture graphics and sound effects. 
-                                            The player can fight enemies to gain XP, level up to gain more health, and earn gold to buy items from shops.
-                                        </p>
-                                        <hr class="card-hr"/>
-                                        <small><em><strong>Java, Swing</strong></em></small>
-                                        <div class="d-flex justify-content-between pt-2 mt-auto">
-                                            <a class="mt-auto btn btn-outline-light d-md-block d-none card-button" data-bs-toggle="modal" data-bs-target="#modalTextQuest">Learn More</a>
-                                            <small class="">
-                                                <div>
-                                                    <i class="fas fa-user text-white"></i>
-                                                    Individual
-                                                </div>
-                                                <div>
-                                                    <i class="fas fa-calendar-alt text-white"></i>
-                                                    Spring, 2022
-                                                </div>
-                                            </small>
+                                <!-- dnd.kenibenj.com -->
+                                <div class=" col-lg-4">
+                                    <div class="card selection bg-dark text-white text-start h-100" id="cardDnd">
+                                        <a class="stretched-link d-sm-block d-md-none d-lg-none" data-bs-toggle="modal" data-bs-target="#modalDnd"></a>
+                                        <img id="imgDnd" class="card-img-top card-image" src="images/dnd.png" alt="Card image cap">
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title">Dungeons &amp; Dragons Character Management System</h5>
+                                            <p class="card-text">
+                                                Web application that maintains a database of D&D characters which keeps track of basic stats, and allows users to create, view, edit, and delete these characters.
+                                            </p>
+                                            <hr class="card-hr"/>
+                                            <small><em><strong>ASP.NET C# / SQL Server / Bootstrap CSS / JQuery Javascript</strong></em></small>
+                                            <div class="d-flex justify-content-between pt-2 mt-auto">
+                                                <a class="mt-auto btn btn-outline-light d-md-block d-none card-button" data-bs-toggle="modal" data-bs-target="#modalDnd">Learn More</a>
+                                                <small class="">
+                                                    <div>
+                                                        <i class="fas fa-user text-white"></i>
+                                                        Individual
+                                                    </div>
+                                                    <div>
+                                                        <i class="fas fa-calendar-alt text-white"></i>
+                                                        Fall, 2022
+                                                    </div>
+                                                </small>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!-- Modal -->
-                            <div class="modal fade" id="modalTextQuest" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-xl">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h3 class="modal-title" id="exampleModalLabel">Text Quest</h3>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body text-start">
-                                        <p class="para">
-                                            While earlier projects had given me some experience with Java GUI development in JavaFX, I still had not yet used the older and more native Swing toolkit. 
-                                            In order to improve my skills in UI I watched a series of Youtube tutorials and created a simple text adventure game that introduced me to basic Java Swing concepts. 
-                                            Over the next couple of months in my free-time I would make several more updated versions of the game, each with more features than the last. 
-                                            This included sound effects, status indicators, shops, random-chance encounters, a basic storyline, and more. 
-                                            The final version was completed shortly after the end of my Sophomore year in college, and takes roughly 15 or so minutes to complete from start to finish.
-                                        </p>
-                                        <br class="d-none d-sm-block">
-                                        <img class="img-fluid mx-auto float-sm-start me-4 mb-1 black-border image-normal d-none d-sm-block"  src="images/TextQuest.gif" />
-                                        <p class="para">
-                                            At its completion this project was the one I had the most fun creating, largely because it involved a great deal of creative design and media-manipulation. 
-                                            While most of the illustrations are not mine and are just simply taken from the web (this was a personal project with no monetary goals, after all), all of them are edited using Photoshop in order to fit the art style of the game. 
-                                            The sound effects had to be modified as well; some of them hardly even sound like their original form anymore.
-                                        </p>
-                                        <br class="d-none d-sm-block">
-                                        <p class="para">
-                                            If you wish to play the game for yourself, you can download an .exe file <a class="text-ref" href="../downloadables/Text Quest.exe" download="Text Quest.exe">here</a>.
-                                            You can also find the source code as well as the older versions of the game on my Github account.
-                                        <br class="d-none d-sm-block">
-                                    </div>
-                                    <div class="modal-footer p-3 d-flex justify-content-between">
-                                        <a class="modal-icon" href="https://github.com/kenibenj/TextQuest"><i class="fa-brands fa-github"></i></a></li>
-                                        <a type="button" class="btn modal-button btn-dark" data-bs-dismiss="modal">Close</a>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                        <div class="row collapse" id="card-collapse">
-
-                            <!-- kenibenj.com V.2 -->
-                            <div class="col-lg-4">
-                                <div class="card selection bg-dark text-white text-start h-100" id="cardKeniBenjV2">
-                                    <a class="stretched-link d-sm-block d-md-none d-lg-none" data-bs-toggle="modal" data-bs-target="#modalKeniBenjV2"></a>
-                                    <img id="imgKeniBenjV2" class="card-img-top card-image" src="images/KeniBenjV2.png" alt="Card image cap">
-                                    <div class="card-body d-flex flex-column">
-                                        <h5 class="card-title">Personal Website v.2</h5>
-                                        <p class="card-text">
-                                            You're already here!
-                                            Second iteration of my personal website.
-                                            Created to be an improvement upon the original site in every way, though with a special focus on superior responsive design.
-                                        </p>
-                                        <hr class="card-hr"/>
-                                        <small><em><strong>Bootstrap &amp; Vanilla CSS / Javascript</strong></em></small>
-                                        <div class="d-flex justify-content-between pt-2 mt-auto">
-                                            <a class="mt-auto btn btn-outline-light d-md-block d-none card-button" data-bs-toggle="modal" data-bs-target="#modalKeniBenjV2">Learn More</a>
-                                            <small class="">
-                                                <div>
-                                                    <i class="fas fa-user text-white"></i>
-                                                    Individual
-                                                </div>
-                                                <div>
-                                                    <i class="fas fa-calendar-alt text-white"></i>
-                                                    Summer, 2023
-                                                </div>
-                                            </small>
+                                <!-- Modal -->
+                                <div class="modal fade" id="modalDnd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-xl">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" id="exampleModalLabel">Dungeons &amp; Dragons Character Management System</h3>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <p class="para">
+                                                The D&D Customer Management System (CMS) is an online tool meant to assist Dungeons and Dragons players create, view, and store the various characters & creatures used in their campaigns. 
+                                                Developed for an informatics class in the Fall of 2022, this project was developed in order to gain skills and experience in the field of web development. 
+                                                It was encouraged to create an application relevant to an interest or hobby, and as I frequently play D&D I decided to base my site around it. 
+                                                The idea for a character management system was inspired by the customer managements systems used by businesses.
+                                            </p>
+                                            <br class="d-none d-sm-block">
+                                            <img class="img-fluid mx-auto float-sm-start me-4 mb-1 black-border image-normal d-none d-sm-block" src="images/dnd.gif" />
+                                            <p class="para">
+                                                This website is built using the ASP.NET MVC Core framework in C#. 
+                                                The database is in SQL Server with the backend using ADO.NET for communication to and from the database. 
+                                                The frontend makes use of Bootstrap 5 and JQuery as I wanted to gain more experience using commonly seen libraries (I had mostly used vanilla CSS and Javascript before developing this site). 
+                                                The D&D CMS is hosted on an AWS server using the IIS webserver. While all of the artwork used has been modified to suit the website's needs, very little of it besides the logo is originally mine. 
+                                                All artwork was edited/created in Adobe Photoshop.
+                                            </p>
+                                            <br class="d-none d-sm-block">
+                                            <p class="para">
+                                                The site received its last major update in early December 2022 and received an A grade from the professor. 
+                                                As its original vision has been fulfilled, the project is more or less complete and can be visited at <a href="https://dnd.kenibenj.com/">dnd.kenibenj.com</a>.
+                                                in the future I may go back and add additional features &amp; content to the site.
+                                                I will likely get a better domain name for the website instead of using a subdomain of my personal website should this occur.
+                                            <br class="d-none d-sm-block">
+                                        </div>
+                                        <div class="modal-footer p-3 d-flex justify-content-between">
+                                            <a class="modal-icon" href="https://github.com/kenibenj/DnD-CMS-Public"><i class="fa-brands fa-github"></i></a></li>
+                                            <a type="button" class="btn modal-button btn-dark" data-bs-dismiss="modal">Close</a>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!-- Modal -->
-                            <div class="modal fade" id="modalKeniBenjV2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-xl">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h3 class="modal-title" id="exampleModalLabel">Personal Website v.2</h3>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body text-start">
-                                        <p class="para">
-                                            Upon completing my Computer Science degree in Spring 2023, I found myself without any immediate job lined up. 
-                                            I ended up having a lot of free time on my hands since my current job at the time was only part-time. 
-                                            The previous Summer I had created the first iteration of this website using what little HTML and CSS I knew at the time (which also happened to be my first website ever).
-                                            While I was proud of how it turned out, it was clear that there was room for significant improvement and so using my newfound free time, I took on the challenge of revamping it, incorporating the web skills I had acquired over the past year.
-                                        </p>
-                                        <br class="d-none d-sm-block">
-                                        <img class="img-fluid float-sm-start me-4 mb-1 black-border image-normal d-none d-sm-block"  src="images/KeniBenjV2.png" />
-                                        <p class="para">
-                                            This version of my site puts much more focus on being responsive, compared to the first iteration which was designed without any regard to its usage on mobile devices.
-                                            To help with this, I utilized the Bootstrap 5 CSS framework to carry some of the workload, though the design choices I made for the site required some amount of manually-coded responsive behavior using vanilla CSS.
-                                            The end result was a website that combined many of the aesthetic choices of the first iteration with a superior layout and a more mobile-friendly design.
-                                        </p>
-                                        <br class="d-none d-sm-block">
-                                        <p class="para">
-                                            For now, I am quite happy with this website, though I don't doubt that in the future there may come a time when I will want to revamp the site again.
-                                            If you are interested in seeing the first version of this website, you should be able to find it listed alongside my other projects.
-                                        <br class="d-none d-sm-block">
-                                    </div>
-                                    <div class="modal-footer p-3 d-flex justify-content-between">
-                                        <a class="modal-icon" href="https://github.com/kenibenj/kenibenjNEW"><i class="fa-brands fa-github"></i></a></li>
-                                        <a type="button" class="btn modal-button btn-dark" data-bs-dismiss="modal">Close</a>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Essence Toolkit -->
-                            <div class="col-lg-4 pt-4 pt-lg-0">
-                                <div class="card selection bg-dark text-white text-start h-100" id="cardEssence">
-                                    <a class="stretched-link d-sm-block d-md-none d-lg-none" data-bs-toggle="modal" data-bs-target="#modalEssence"></a>
-                                    <iframe class="card-img-top card-image" src="https://www.youtube.com/embed/VVKB7AQEI8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <div class="card-body d-flex flex-column">
-                                        <h5 class="card-title">Essence Standard Toolkit</h5>
-                                        <p class="card-text">
-                                            A digital library of Essentialized practices that will allow the user to view cards, Essence diagrams, and play Essence serious games.
-                                        </p>
-                                        <hr class="card-hr"/>
-                                        <small><em><strong>Java, JavaFX, Javalin</strong></em></small>
-                                        <div class="d-flex justify-content-between pt-2 mt-auto">
-                                            <a class="mt-auto btn btn-outline-light d-md-block d-none card-button" data-bs-toggle="modal" data-bs-target="#modalEssence">Learn More</a>
-                                            <small class="">
-                                                <div>
-                                                    <i class="fas fa-user text-white"></i>
-                                                    Group of 4
-                                                </div>
-                                                <div>
-                                                    <i class="fas fa-calendar-alt text-white"></i>
-                                                    Spring, 2022
-                                                </div>
-                                            </small>
+                                <!-- Text Quest -->
+                                <div class="col-lg-4">
+                                    <div class="card selection bg-dark text-white text-start h-100" id="cardTextQuest">
+                                        <a class="stretched-link d-sm-block d-md-none d-lg-none" data-bs-toggle="modal" data-bs-target="#modalTextQuest"></a>
+                                        <img id="imgTextQuest" class="card-img-top card-image" src="images/TextQuest.png" alt="Card image cap">
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title">Text Quest</h5>
+                                            <p class="card-text">
+                                                A text-based adventure game with a GUI that includes picture graphics and sound effects. 
+                                                The player can fight enemies to gain XP, level up to gain more health, and earn gold to buy items from shops.
+                                            </p>
+                                            <hr class="card-hr"/>
+                                            <small><em><strong>Java, Swing</strong></em></small>
+                                            <div class="d-flex justify-content-between pt-2 mt-auto">
+                                                <a class="mt-auto btn btn-outline-light d-md-block d-none card-button" data-bs-toggle="modal" data-bs-target="#modalTextQuest">Learn More</a>
+                                                <small class="">
+                                                    <div>
+                                                        <i class="fas fa-user text-white"></i>
+                                                        Individual
+                                                    </div>
+                                                    <div>
+                                                        <i class="fas fa-calendar-alt text-white"></i>
+                                                        Spring, 2022
+                                                    </div>
+                                                </small>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <!-- Modal -->
-                            <div class="modal fade" id="modalEssence" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-xl">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h3 class="modal-title" id="exampleModalLabel">Essence Standard Toolkit</h3>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body text-start">
-                                        <p class="para">
-                                            One of many semester-long group assignments I did throughout my college career, I and a group of fellow students were tasked with planning, developing, testing, and deploying a Java-based application. 
-                                            Unlike previous group projects, however, this time it was required that Agile practices such as having weekly Scrum meetings and maintaining a Kanban board be included in our group's development process. 
-                                            The project was also supposed to be worked on via iterative development cycles as opposed to the more waterfall-based approach that I was used to from earlier assignments.
-                                        </p>
-                                        <br class="d-none d-sm-block">
-                                        <iframe width="560" height="315" class="d-none d-sm-block float-sm-start me-4 mb-1 black-border" src="https://www.youtube.com/embed/VVKB7AQEI8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        <p class="para">
-                                            The project itself was a set of tools based around the <a class="text-ref" href="https://www.ivarjacobson.com/Essence">Essence Standard</a>, which is a framework for discussing the theory of software engineering that attempts to uncomplicate the software development process through the use of models, practices, and methods (if that sounds far too abstract for practical use, then you and I would be in agreement). 
-                                            In addition to the technologies used in the Acquire project, this assignment also made use of Javalin, TextFX, Hibernate ORM, and Docker - though I played no part in the implementation of the latter two technologies.
-                                        </p>
-                                        <p class="para">
-                                            My primary contribution was the Essence Practice Creator, which was essentially a diagram-maker used to construct Essence graphs and export them as .png files. 
-                                            I was content with this, as the practice creator gave me experience in developing GUIs that I had largely missed in previous projects. 
-                                            A stand-alone version of the Essence Practice Creator can be downloaded <a class="text-ref" href="../downloadables/HelloFX.jar" download="Essence Practice Creator.jar">here</a> if you are interested (it is a .jar file; you must have Java installed on your machine for it to work).
-                                        <br class="d-none d-sm-block">
-                                        <p class="para">
-                                            Ultimately the scope of the project was a little too much for a group of four to handle in only two or so months, so the project is a little janky in some areas and downright unfinished in others. 
-                                            Nevertheless, our professor was impressed with what we were able to produce in the given time and gave us an A- on the assignment.
-                                        <br class="d-none d-sm-block">
-                                    </div>
-                                    <div class="modal-footer p-3 d-flex justify-content-between">
-                                        <a class="modal-icon" href="https://github.com/Not-Up-To-Code/Up-to-Code"><i class="fa-brands fa-github"></i></a></li>
-                                        <a type="button" class="btn modal-button btn-dark" data-bs-dismiss="modal">Close</a>
-                                    </div>
+                                <!-- Modal -->
+                                <div class="modal fade" id="modalTextQuest" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-xl">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" id="exampleModalLabel">Text Quest</h3>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <p class="para">
+                                                While earlier projects had given me some experience with Java GUI development in JavaFX, I still had not yet used the older and more native Swing toolkit. 
+                                                In order to improve my skills in UI I watched a series of Youtube tutorials and created a simple text adventure game that introduced me to basic Java Swing concepts. 
+                                                Over the next couple of months in my free-time I would make several more updated versions of the game, each with more features than the last. 
+                                                This included sound effects, status indicators, shops, random-chance encounters, a basic storyline, and more. 
+                                                The final version was completed shortly after the end of my Sophomore year in college, and takes roughly 15 or so minutes to complete from start to finish.
+                                            </p>
+                                            <br class="d-none d-sm-block">
+                                            <img class="img-fluid mx-auto float-sm-start me-4 mb-1 black-border image-normal d-none d-sm-block"  src="images/TextQuest.gif" />
+                                            <p class="para">
+                                                At its completion this project was the one I had the most fun creating, largely because it involved a great deal of creative design and media-manipulation. 
+                                                While most of the illustrations are not mine and are just simply taken from the web (this was a personal project with no monetary goals, after all), all of them are edited using Photoshop in order to fit the art style of the game. 
+                                                The sound effects had to be modified as well; some of them hardly even sound like their original form anymore.
+                                            </p>
+                                            <br class="d-none d-sm-block">
+                                            <p class="para">
+                                                If you wish to play the game for yourself, you can download an .exe file <a class="text-ref" href="../downloadables/Text Quest.exe" download="Text Quest.exe">here</a>.
+                                                You can also find the source code as well as the older versions of the game on my Github account.
+                                            <br class="d-none d-sm-block">
+                                        </div>
+                                        <div class="modal-footer p-3 d-flex justify-content-between">
+                                            <a class="modal-icon" href="https://github.com/kenibenj/TextQuest"><i class="fa-brands fa-github"></i></a></li>
+                                            <a type="button" class="btn modal-button btn-dark" data-bs-dismiss="modal">Close</a>
+                                        </div>
+                                        </div>
                                     </div>
                                 </div>
+
+
                             </div>
+
+                            <div class="row collapse" id="card-collapse">
+
+                                <!-- kenibenj.com V.2 -->
+                                <div class="col-lg-4">
+                                    <div class="card selection bg-dark text-white text-start h-100" id="cardKeniBenjV2">
+                                        <a class="stretched-link d-sm-block d-md-none d-lg-none" data-bs-toggle="modal" data-bs-target="#modalKeniBenjV2"></a>
+                                        <img id="imgKeniBenjV2" class="card-img-top card-image" src="images/KeniBenjV2.png" alt="Card image cap">
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title">Personal Website v.2</h5>
+                                            <p class="card-text">
+                                                You're already here!
+                                                Second iteration of my personal website.
+                                                Created to be an improvement upon the original site in every way, though with a special focus on superior responsive design.
+                                            </p>
+                                            <hr class="card-hr"/>
+                                            <small><em><strong>Bootstrap &amp; Vanilla CSS / Javascript</strong></em></small>
+                                            <div class="d-flex justify-content-between pt-2 mt-auto">
+                                                <a class="mt-auto btn btn-outline-light d-md-block d-none card-button" data-bs-toggle="modal" data-bs-target="#modalKeniBenjV2">Learn More</a>
+                                                <small class="">
+                                                    <div>
+                                                        <i class="fas fa-user text-white"></i>
+                                                        Individual
+                                                    </div>
+                                                    <div>
+                                                        <i class="fas fa-calendar-alt text-white"></i>
+                                                        Summer, 2023
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="modalKeniBenjV2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-xl">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" id="exampleModalLabel">Personal Website v.2</h3>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <p class="para">
+                                                Upon completing my Computer Science degree in Spring 2023, I found myself without any immediate job lined up. 
+                                                I ended up having a lot of free time on my hands since my current job at the time was only part-time. 
+                                                The previous Summer I had created the first iteration of this website using what little HTML and CSS I knew at the time (which also happened to be my first website ever).
+                                                While I was proud of how it turned out, it was clear that there was room for significant improvement and so using my newfound free time, I took on the challenge of revamping it, incorporating the web skills I had acquired over the past year.
+                                            </p>
+                                            <br class="d-none d-sm-block">
+                                            <img class="img-fluid float-sm-start me-4 mb-1 black-border image-normal d-none d-sm-block"  src="images/KeniBenjV2.png" />
+                                            <p class="para">
+                                                This version of my site puts much more focus on being responsive, compared to the first iteration which was designed without any regard to its usage on mobile devices.
+                                                To help with this, I utilized the Bootstrap 5 CSS framework to carry some of the workload, though the design choices I made for the site required some amount of manually-coded responsive behavior using vanilla CSS.
+                                                The end result was a website that combined many of the aesthetic choices of the first iteration with a superior layout and a more mobile-friendly design.
+                                            </p>
+                                            <br class="d-none d-sm-block">
+                                            <p class="para">
+                                                For now, I am quite happy with this website, though I don't doubt that in the future there may come a time when I will want to revamp the site again.
+                                                If you are interested in seeing the first version of this website, you should be able to find it listed alongside my other projects.
+                                            <br class="d-none d-sm-block">
+                                        </div>
+                                        <div class="modal-footer p-3 d-flex justify-content-between">
+                                            <a class="modal-icon" href="https://github.com/kenibenj/kenibenjNEW"><i class="fa-brands fa-github"></i></a></li>
+                                            <a type="button" class="btn modal-button btn-dark" data-bs-dismiss="modal">Close</a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Essence Toolkit -->
+                                <div class="col-lg-4 pt-4 pt-lg-0">
+                                    <div class="card selection bg-dark text-white text-start h-100" id="cardEssence">
+                                        <a class="stretched-link d-sm-block d-md-none d-lg-none" data-bs-toggle="modal" data-bs-target="#modalEssence"></a>
+                                        <iframe class="card-img-top card-image" src="https://www.youtube.com/embed/VVKB7AQEI8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title">Essence Standard Toolkit</h5>
+                                            <p class="card-text">
+                                                A digital library of Essentialized practices that will allow the user to view cards, Essence diagrams, and play Essence serious games.
+                                            </p>
+                                            <hr class="card-hr"/>
+                                            <small><em><strong>Java, JavaFX, Javalin</strong></em></small>
+                                            <div class="d-flex justify-content-between pt-2 mt-auto">
+                                                <a class="mt-auto btn btn-outline-light d-md-block d-none card-button" data-bs-toggle="modal" data-bs-target="#modalEssence">Learn More</a>
+                                                <small class="">
+                                                    <div>
+                                                        <i class="fas fa-user text-white"></i>
+                                                        Group of 4
+                                                    </div>
+                                                    <div>
+                                                        <i class="fas fa-calendar-alt text-white"></i>
+                                                        Spring, 2022
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="modalEssence" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-xl">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" id="exampleModalLabel">Essence Standard Toolkit</h3>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <p class="para">
+                                                One of many semester-long group assignments I did throughout my college career, I and a group of fellow students were tasked with planning, developing, testing, and deploying a Java-based application. 
+                                                Unlike previous group projects, however, this time it was required that Agile practices such as having weekly Scrum meetings and maintaining a Kanban board be included in our group's development process. 
+                                                The project was also supposed to be worked on via iterative development cycles as opposed to the more waterfall-based approach that I was used to from earlier assignments.
+                                            </p>
+                                            <br class="d-none d-sm-block">
+                                            <iframe width="560" height="315" class="d-none d-sm-block float-sm-start me-4 mb-1 black-border" src="https://www.youtube.com/embed/VVKB7AQEI8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <p class="para">
+                                                The project itself was a set of tools based around the <a class="text-ref" href="https://www.ivarjacobson.com/Essence">Essence Standard</a>, which is a framework for discussing the theory of software engineering that attempts to uncomplicate the software development process through the use of models, practices, and methods (if that sounds far too abstract for practical use, then you and I would be in agreement). 
+                                                In addition to the technologies used in the Acquire project, this assignment also made use of Javalin, TextFX, Hibernate ORM, and Docker - though I played no part in the implementation of the latter two technologies.
+                                            </p>
+                                            <p class="para">
+                                                My primary contribution was the Essence Practice Creator, which was essentially a diagram-maker used to construct Essence graphs and export them as .png files. 
+                                                I was content with this, as the practice creator gave me experience in developing GUIs that I had largely missed in previous projects. 
+                                                A stand-alone version of the Essence Practice Creator can be downloaded <a class="text-ref" href="../downloadables/HelloFX.jar" download="Essence Practice Creator.jar">here</a> if you are interested (it is a .jar file; you must have Java installed on your machine for it to work).
+                                            <br class="d-none d-sm-block">
+                                            <p class="para">
+                                                Ultimately the scope of the project was a little too much for a group of four to handle in only two or so months, so the project is a little janky in some areas and downright unfinished in others. 
+                                                Nevertheless, our professor was impressed with what we were able to produce in the given time and gave us an A- on the assignment.
+                                            <br class="d-none d-sm-block">
+                                        </div>
+                                        <div class="modal-footer p-3 d-flex justify-content-between">
+                                            <a class="modal-icon" href="https://github.com/Not-Up-To-Code/Up-to-Code"><i class="fa-brands fa-github"></i></a></li>
+                                            <a type="button" class="btn modal-button btn-dark" data-bs-dismiss="modal">Close</a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <!-- Acquire -->
+                                <div class="col-lg-4 pt-4 pt-lg-0">
+                                    <div class="card selection bg-dark text-white text-start h-100" id="cardAcquire">
+                                        <a class="stretched-link d-sm-block d-md-none d-lg-none" data-bs-toggle="modal" data-bs-target="#modalAcquire"></a>
+                                        <iframe class="card-img-top card-image" src="https://www.youtube.com/embed/86RP2CVKBzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title">Acquire</h5>
+                                            <p class="card-text">
+                                                A recreation of the 6-player board game Acquire with a working Graphical User Interface (GUI) and a JSON-based save system.
+                                            </p>
+                                            <hr class="card-hr"/>
+                                            <small><em><strong>Java, JavaFX</strong></em></small>
+                                            <div class="d-flex justify-content-between pt-2 mt-auto">
+                                                <a class="mt-auto btn btn-outline-light d-md-block d-none card-button" data-bs-toggle="modal" data-bs-target="#modalAcquire">Learn More</a>
+                                                <small class="">
+                                                    <div>
+                                                        <i class="fas fa-user text-white"></i>
+                                                        Group of 3
+                                                    </div>
+                                                    <div>
+                                                        <i class="fas fa-calendar-alt text-white"></i>
+                                                        Fall, 2021
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="modalAcquire" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-xl">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" id="exampleModalLabel">Acquire</h3>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <p class="para">
+                                                The semester-long group assignment for my Advanced OOP class, this project had me and two other students developing a game none of us had heard of before. 
+                                                What made this project unique was that it was meant to give us some introductory practices used in the real world; my team planned out how we were going to build the game by creating UML diagrams, wrote unit tests to see if our code was proficient, and tediously wrote in-depth comments for every method & class to ensure the code was well-documented. 
+                                                The project also familiarized me with important development tools such as Git and Gradle.
+                                            </p>
+                                            <br class="d-none d-sm-block">
+                                            <iframe width="560" height="315" class="d-none d-sm-block float-sm-start me-4 mb-1 black-border" src="https://www.youtube.com/embed/86RP2CVKBzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <p class="para">
+                                                For my part, I was mostly involved in writing parts of the actual game logic and unfortunately wasn't particularly involved for the GUI creation created in JavaFX. 
+                                                Regardless, our project turned out well and earned our team a good grade - maybe an A-? I forget. 
+                                                As part of the assignment, our team needed to make a presentation video to demo the project, which I have posted here if you care to listen to a more in-depth explanation and showcase of the game.
+                                            </p>
+                                            <p class="para">
+                                                I thoroughly enjoyed this assignment, largely due to the camaraderie & productivity of my group, and felt as though the project drastically improved my "soft" skills such as project management and the ability to work within a team.
+                                            <br class="d-none d-sm-block">
+                                        </div>
+                                        <div class="modal-footer p-3 d-flex justify-content-between">
+                                            <a class="modal-icon" href="https://github.com/kenibenj/AcquireProject"><i class="fa-brands fa-github"></i></a></li>
+                                            <a type="button" class="btn modal-button btn-dark" data-bs-dismiss="modal">Close</a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- kenibenj.com V.1 -->
+                                <div class="col-lg-4 pt-4 mx-auto">
+                                    <div class="card selection bg-dark text-white text-start h-100" id="cardKeniBenjV1">
+                                        <a class="stretched-link d-sm-block d-md-none d-lg-none" data-bs-toggle="modal" data-bs-target="#modalKeniBenjV1"></a>
+                                        <img id="imgKeniBenjV1" class="card-img-top card-image" src="images/KeniBenjV1.png" alt="Card image cap">
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title">Personal Website v.1</h5>
+                                            <p class="card-text">
+                                                First iteration of my website primarily devoted to talking about and showcasing my interests. 
+                                            </p>
+                                            <hr class="card-hr"/>
+                                            <small><em><strong>Vanilla CSS, Javascript</strong></em></small>
+                                            <div class="d-flex justify-content-between pt-2 mt-auto">
+                                                <a class="mt-auto btn btn-outline-light d-md-block d-none card-button" data-bs-toggle="modal" data-bs-target="#modalKeniBenjV1">Learn More</a>
+                                                <small class="">
+                                                    <div>
+                                                        <i class="fas fa-user text-white"></i>
+                                                        Individual
+                                                    </div>
+                                                    <div>
+                                                        <i class="fas fa-calendar-alt text-white"></i>
+                                                        Summer, 2022
+                                                    </div>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="modalKeniBenjV1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-xl">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3 class="modal-title" id="exampleModalLabel">Personal Website v.1</h3>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <p class="para">
+                                                The computer science major at Idaho State University has no required courses dedicated to web development. 
+                                                I realized it might be a problem if I graduated with a CS degree and still didn't understand HTML, so I enrolled in the few web development courses ISU does offer (all listed as Informatics classes, for some reason). 
+                                                Following my Spring 2022 semester I knew the basics of front-end development but I still lacked practical experience in designing a website from scratch. 
+                                                After seeing some friends of mine create on their own websites(<a class="text-ref" href="https://mcdelius.com/">mcdelius.com</a> &amp <a class="text-ref" href="https://obeliskcollective.com/">obeliskcollective.com</a>) I decided I would try to make one as well as a pet project to work on over the Summer.
+                                            </p>
+                                            <br class="d-none d-sm-block">
+                                            <img class="img-fluid float-sm-start me-4 mb-1 black-border image-normal d-none d-sm-block"  src="images/KeniBenjV1.png" />
+                                            <p class="para">
+                                                As the site is mostly a series of static webpages, most of the 'code' is just HTML and CSS - though a little Javascript is used here and there. 
+                                                The site, like my current personal website, is currently hosted through Github Pages as it is both free and convenient to use, though in the future I may switch to another method of web-hosting as Github Pages does not support the use of server-side languages such as PHP. 
+                                                This means I have to use third-party tools in order to have a working contact form and an email associated with my website's domain-name, which is not something I'm super fond of. 
+                                                All the same, creating a website without the help of a website builder furthered my proficiency in the foundational skills needed for front-end web development.
+                                            </p>
+                                            <p class="para">
+                                                Obviously this version of my website is no longer utilized as it has been replaced by the version you are currently using, though I do still have it hosted <a class="text-ref" href="https://v1.kenibenj.com/">here</a> if you want to check it out for yourself.
+                                            <br class="d-none d-sm-block">
+                                        </div>
+                                        <div class="modal-footer p-3 d-flex justify-content-between">
+                                            <a class="modal-icon" href="https://github.com/kenibenj/v1.kenibenj.com"><i class="fa-brands fa-github"></i></a></li>
+                                            <a type="button" class="btn modal-button btn-dark" data-bs-dismiss="modal">Close</a>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
                             
-
-                            <!-- Acquire -->
-                            <div class="col-lg-4 pt-4 pt-lg-0">
-                                <div class="card selection bg-dark text-white text-start h-100" id="cardAcquire">
-                                    <a class="stretched-link d-sm-block d-md-none d-lg-none" data-bs-toggle="modal" data-bs-target="#modalAcquire"></a>
-                                    <iframe class="card-img-top card-image" src="https://www.youtube.com/embed/86RP2CVKBzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                    <div class="card-body d-flex flex-column">
-                                        <h5 class="card-title">Acquire</h5>
-                                        <p class="card-text">
-                                            A recreation of the 6-player board game Acquire with a working Graphical User Interface (GUI) and a JSON-based save system.
-                                        </p>
-                                        <hr class="card-hr"/>
-                                        <small><em><strong>Java, JavaFX</strong></em></small>
-                                        <div class="d-flex justify-content-between pt-2 mt-auto">
-                                            <a class="mt-auto btn btn-outline-light d-md-block d-none card-button" data-bs-toggle="modal" data-bs-target="#modalAcquire">Learn More</a>
-                                            <small class="">
-                                                <div>
-                                                    <i class="fas fa-user text-white"></i>
-                                                    Group of 3
-                                                </div>
-                                                <div>
-                                                    <i class="fas fa-calendar-alt text-white"></i>
-                                                    Fall, 2021
-                                                </div>
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Modal -->
-                            <div class="modal fade" id="modalAcquire" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-xl">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h3 class="modal-title" id="exampleModalLabel">Acquire</h3>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body text-start">
-                                        <p class="para">
-                                            The semester-long group assignment for my Advanced OOP class, this project had me and two other students developing a game none of us had heard of before. 
-                                            What made this project unique was that it was meant to give us some introductory practices used in the real world; my team planned out how we were going to build the game by creating UML diagrams, wrote unit tests to see if our code was proficient, and tediously wrote in-depth comments for every method & class to ensure the code was well-documented. 
-                                            The project also familiarized me with important development tools such as Git and Gradle.
-                                        </p>
-                                        <br class="d-none d-sm-block">
-                                        <iframe width="560" height="315" class="d-none d-sm-block float-sm-start me-4 mb-1 black-border" src="https://www.youtube.com/embed/86RP2CVKBzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        <p class="para">
-                                            For my part, I was mostly involved in writing parts of the actual game logic and unfortunately wasn't particularly involved for the GUI creation created in JavaFX. 
-                                            Regardless, our project turned out well and earned our team a good grade - maybe an A-? I forget. 
-                                            As part of the assignment, our team needed to make a presentation video to demo the project, which I have posted here if you care to listen to a more in-depth explanation and showcase of the game.
-                                        </p>
-                                        <p class="para">
-                                            I thoroughly enjoyed this assignment, largely due to the camaraderie & productivity of my group, and felt as though the project drastically improved my "soft" skills such as project management and the ability to work within a team.
-                                        <br class="d-none d-sm-block">
-                                    </div>
-                                    <div class="modal-footer p-3 d-flex justify-content-between">
-                                        <a class="modal-icon" href="https://github.com/kenibenj/AcquireProject"><i class="fa-brands fa-github"></i></a></li>
-                                        <a type="button" class="btn modal-button btn-dark" data-bs-dismiss="modal">Close</a>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- kenibenj.com V.1 -->
-                            <div class="col-lg-4 pt-4 mx-auto">
-                                <div class="card selection bg-dark text-white text-start h-100" id="cardKeniBenjV1">
-                                    <a class="stretched-link d-sm-block d-md-none d-lg-none" data-bs-toggle="modal" data-bs-target="#modalKeniBenjV1"></a>
-                                    <img id="imgKeniBenjV1" class="card-img-top card-image" src="images/KeniBenjV1.png" alt="Card image cap">
-                                    <div class="card-body d-flex flex-column">
-                                        <h5 class="card-title">Personal Website v.1</h5>
-                                        <p class="card-text">
-                                            First iteration of my website primarily devoted to talking about and showcasing my interests. 
-                                        </p>
-                                        <hr class="card-hr"/>
-                                        <small><em><strong>Vanilla CSS, Javascript</strong></em></small>
-                                        <div class="d-flex justify-content-between pt-2 mt-auto">
-                                            <a class="mt-auto btn btn-outline-light d-md-block d-none card-button" data-bs-toggle="modal" data-bs-target="#modalKeniBenjV1">Learn More</a>
-                                            <small class="">
-                                                <div>
-                                                    <i class="fas fa-user text-white"></i>
-                                                    Individual
-                                                </div>
-                                                <div>
-                                                    <i class="fas fa-calendar-alt text-white"></i>
-                                                    Summer, 2022
-                                                </div>
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Modal -->
-                            <div class="modal fade" id="modalKeniBenjV1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-xl">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h3 class="modal-title" id="exampleModalLabel">Personal Website v.1</h3>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body text-start">
-                                        <p class="para">
-                                            The computer science major at Idaho State University has no required courses dedicated to web development. 
-                                            I realized it might be a problem if I graduated with a CS degree and still didn't understand HTML, so I enrolled in the few web development courses ISU does offer (all listed as Informatics classes, for some reason). 
-                                            Following my Spring 2022 semester I knew the basics of front-end development but I still lacked practical experience in designing a website from scratch. 
-                                            After seeing some friends of mine create on their own websites(<a class="text-ref" href="https://mcdelius.com/">mcdelius.com</a> &amp <a class="text-ref" href="https://obeliskcollective.com/">obeliskcollective.com</a>) I decided I would try to make one as well as a pet project to work on over the Summer.
-                                        </p>
-                                        <br class="d-none d-sm-block">
-                                        <img class="img-fluid float-sm-start me-4 mb-1 black-border image-normal d-none d-sm-block"  src="images/KeniBenjV1.png" />
-                                        <p class="para">
-                                            As the site is mostly a series of static webpages, most of the 'code' is just HTML and CSS - though a little Javascript is used here and there. 
-                                            The site, like my current personal website, is currently hosted through Github Pages as it is both free and convenient to use, though in the future I may switch to another method of web-hosting as Github Pages does not support the use of server-side languages such as PHP. 
-                                            This means I have to use third-party tools in order to have a working contact form and an email associated with my website's domain-name, which is not something I'm super fond of. 
-                                            All the same, creating a website without the help of a website builder furthered my proficiency in the foundational skills needed for front-end web development.
-                                        </p>
-                                        <p class="para">
-                                            Obviously this version of my website is no longer utilized as it has been replaced by the version you are currently using, though I do still have it hosted <a class="text-ref" href="https://v1.kenibenj.com/">here</a> if you want to check it out for yourself.
-                                        <br class="d-none d-sm-block">
-                                    </div>
-                                    <div class="modal-footer p-3 d-flex justify-content-between">
-                                        <a class="modal-icon" href="https://github.com/kenibenj/v1.kenibenj.com"><i class="fa-brands fa-github"></i></a></li>
-                                        <a type="button" class="btn modal-button btn-dark" data-bs-dismiss="modal">Close</a>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <button id="toggleButton" onclick="toggleButtonText()" class="bg-dark show-more-button" data-bs-toggle="collapse" data-bs-target="#card-collapse" aria-expanded="false" aria-controls="card-collapse" 
+                                style="
+                                    color: white;
+                                    padding: 15px;
+                                    font-size: 18px;
+                                    border: 1px; 
+                                    border-radius: 3px;
+                                    width: 150px;
+                                    margin: 20px auto 0;
+                                    transition: all .15s;">
+                                Show More
+                            </button>
 
                         </div>
-
-                        
-                        <button id="toggleButton" onclick="toggleButtonText()" class="bg-dark show-more-button" data-bs-toggle="collapse" data-bs-target="#card-collapse" aria-expanded="false" aria-controls="card-collapse" 
-                            style="
-                                color: white;
-                                padding: 15px;
-                                font-size: 18px;
-                                border: 1px; 
-                                border-radius: 3px;
-                                width: 150px;
-                                margin: 20px auto 0;
-                                transition: all .15s;">
-                            Show More
-                        </button>
-
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div class="loader">
+        <div class="loader"></div>
+        <div class="static-overlay"></div>
+
+        <!-- Footer -->
+        <div id="footer-container">
+        </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="pb-sm-1 text-white text-center position-relative" style=" background-color: black; box-shadow: 0px -4px 4px 2px rgb(50,50,50, .3);">
-        <div class="container">
-            <ul class="d-flex flex-row navbar-nav justify-content-center pt-3 p-2">
-                <li class="social-items mx-3"><a href="https://github.com/kenibenj"><i class="fa-brands fa-github"></i></a></li>
-                <li class="social-items mx-3"><a href="https://www.linkedin.com/in/benjamin-keninger-858352223/"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li class="social-items mx-3"><a href="https://www.instagram.com/kenibenj/"><i class="fa-brands fa-instagram"></i></a></li>
-                <li class="social-items mx-3"><a href="https://www.youtube.com/channel/UCZRzfx7rSdtQDxwk9zvJw4A"><i class="fa-brands fa-youtube"></i></a></li>
-                <li class="social-items mx-3"><a href="https://soundcloud.com/gramfaucet"><i class="fab fa-soundcloud"></i></a></li>
-            </ul>
-            <p class="">&copy; kenibenj.com &bull; 2023</p>
-            <a href="#" class="position-absolute bottom-0 end-0 p-3 d-md-block d-none"><i class="bi bi-arrow-up-circle h2 text-white"></i></a>
-        </div>
-    </footer>
 </body>
 </html>

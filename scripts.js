@@ -1,5 +1,7 @@
 // Benjamin Keninger 2023
 
+
+// On-load functions
 $(window).on("load", function () {
     $(".loader").fadeOut("medium"); // Fade-in Effect when page is loaded
 
@@ -10,6 +12,7 @@ $(window).on("load", function () {
 });
 
 
+// Fade-out when link is clicked
 $(document).ready(function() {
     $('a').click(function(event) {
         // Get the href attribute of the clicked link
@@ -67,12 +70,15 @@ function themeChanges(){
     var dateTheme = document.getElementsByClassName('date-theme');
     var btnClose = document.getElementsByClassName('btn-close');
     var loader = document.getElementsByClassName('loader');
+    var radialGradientWrapper = document.getElementsByClassName('wrapper');
 
     if (counter % 2 == 0) {
         sessionStorage.setItem("theme", "dark");
         element.classList.add("bi-moon");
         element.classList.remove("bi-sun");
         document.body.style.background = "linear-gradient(to left bottom, rgb(101,101,101), rgb(35,35,35) 70%)";
+        //radialGradientWrapper.style.background = "radial-gradient(#ffffff00, rgb(201,201,201))";
+        //radialGradientWrapper.style.co = "radial-gradient(#ffffff00, rgb(201,201,201))";
         document.body.style.backgroundAttachment = "fixed";
         Array.from(mergedCollection).forEach(function (element) {
             element.style.color = 'white';
@@ -117,8 +123,8 @@ function themeChanges(){
         Array.from(btnClose).forEach(function (element) {
             element.classList.add('btn-close-white');
         });
-                Array.from(btnClose).forEach(function (element) {
-            element.classList.add('btn-close-white');
+        Array.from(radialGradientWrapper).forEach(function (element) {
+            element.style.background = "radial-gradient(#ffffff00, rgb(201,201,201))";
         });
     }
 
@@ -172,9 +178,69 @@ function themeChanges(){
         Array.from(btnClose).forEach(function (element) {
             element.classList.remove('btn-close-white');
         });
+        Array.from(radialGradientWrapper).forEach(function (element) {
+            element.style.background = "radial-gradient(circle, transparent 20%, rgb(201,201,201) 100%)"
+        });
     }
     Array.from(cardHr).forEach(function (element) {
         element.style.color = 'white';
     });
     counter++;
 }
+
+// Navbar icon hover animation
+$(document).ready(function() {
+    const frames = ['gram icon animation 2.png', 'gram icon animation 3.png', 'gram icon animation 1.png'];
+    let currentFrame = 0;
+    let intervalId;
+
+    function animateFaucet() {
+      currentFrame = (currentFrame + 1) % frames.length;
+      $('#faucet-icon').attr('src', "images//" + frames[currentFrame]);
+    }
+
+    function startAnimation() {
+        currentFrame = (currentFrame + 1) % frames.length;
+        $('#faucet-icon').attr('src', "images//" + frames[currentFrame]);
+      intervalId = setInterval(animateFaucet, 333); // Change frame every 333ms for a 1s animation cycle
+    }
+
+    function stopAnimation() {
+      clearInterval(intervalId);
+      $('#faucet-icon').attr('src', "images//" + frames[1]); // Reset to first frame
+      currentFrame = 0;
+    }
+
+    $('#faucet-icon').hover(startAnimation, stopAnimation);
+  });
+
+
+  // Footer Code attatched using JS across all pages since it is shared across the site
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const footerHTML = `
+    <footer class="pb-1 text-white text-center position-relative" style=" background-color: black; box-shadow: 0px -4px 4px 2px rgb(50,50,50, .3);">
+    <div class="container">
+        <ul class="d-flex flex-row navbar-nav justify-content-center pt-3 p-2">
+            <li class="social-items mx-3"><a href="https://github.com/kenibenj"><i class="fa-brands fa-github"></i></a></li>
+            <li class="social-items mx-3"><a href="https://www.linkedin.com/in/benjamin-keninger-858352223/"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li class="social-items mx-3"><a href="https://www.instagram.com/kenibenj/"><i class="fa-brands fa-instagram"></i></a></li>
+            <li class="social-items mx-3"><a href="https://www.youtube.com/channel/UCZRzfx7rSdtQDxwk9zvJw4A"><i class="fa-brands fa-youtube"></i></a></li>
+            <li class="social-items mx-3"><a href="https://soundcloud.com/gramfaucet"><i class="fab fa-soundcloud"></i></a></li>
+        </ul>
+        <p class="">&copy; Benjamin Keninger &bull; <span id="current-year"></span></p>
+        <a href="#" class="position-absolute bottom-0 end-0 p-3 d-md-block d-none"><i class="bi bi-arrow-up-circle h2 text-white"></i></a>
+    </div>
+</footer>
+    `;
+
+    // Create a div element and set its innerHTML to the footerHTML
+    const footerDiv = document.getElementById('footer-container');
+    footerDiv.innerHTML = footerHTML;
+
+    // Append the footer to the body
+    document.body.appendChild(footerDiv);
+
+    // Set the current year in the footer
+    const currentYear = new Date().getFullYear();
+    document.getElementById('current-year').textContent = currentYear;
+  });
