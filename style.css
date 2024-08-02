@@ -26,6 +26,19 @@ label{
     cursor: url('images/cursor-auto.png'), auto;
 }
 
+canvas:hover{
+    cursor: url('images/cursor-draw.png'), auto;
+}
+canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-size:contain;
+    overflow: auto;
+}
+
 ::selection {
     background: black;
     color: white;
@@ -82,6 +95,7 @@ footer ::-moz-selection{
     opacity: 0%;
     animation: blink 1s infinite;
 }
+
 
 .circle-animation-hover{
     outline: 3px solid white;
@@ -157,6 +171,10 @@ footer ::-moz-selection{
     content: '  ';
 }
 
+#modalSettings{
+    stroke: 400px!important;
+}
+
 
  .main{
     font-family: 'Ubuntu Mono', sans-serif;
@@ -229,6 +247,9 @@ footer ::-moz-selection{
     position: absolute;
     height: 125%;
     z-index: -10;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 .wrapper{
@@ -279,6 +300,25 @@ footer ::-moz-selection{
     100%{
         transform: translateX(-10%) translateY(-10%);
     }
+}
+
+.icon-settings{
+    transition: .15s ease-in-out;
+}
+
+.icon.settings{
+    font-size: x-large;
+}
+
+.visible {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.hidden {
+    transform: translateX(80px);
+    opacity: 0;
+    pointer-events: none;
 }
 
 .black-border{
@@ -433,6 +473,22 @@ footer{
 
 
 @media screen and (max-width: 767px) {
+
+    .navbar-nav.icon-div{
+        flex-direction: row;
+        padding-top: 50px;
+        justify-content: space-evenly;
+    }
+
+    #settings{
+        display: none !important;
+    }
+
+    .icon-settings{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
     .sub-title::before{
         content: "";
     }
