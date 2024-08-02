@@ -9,6 +9,10 @@ $(window).on("load", function () {
     if (theme == "dark"){
         themeChanges();
     }
+
+    setStaticPageLoad();
+    drawChangeOnLoad();
+
 });
 
 
@@ -77,8 +81,6 @@ function themeChanges(){
         element.classList.add("bi-moon");
         element.classList.remove("bi-sun");
         document.body.style.background = "linear-gradient(to left bottom, rgb(101,101,101), rgb(35,35,35) 70%)";
-        //radialGradientWrapper.style.background = "radial-gradient(#ffffff00, rgb(201,201,201))";
-        //radialGradientWrapper.style.co = "radial-gradient(#ffffff00, rgb(201,201,201))";
         document.body.style.backgroundAttachment = "fixed";
         Array.from(mergedCollection).forEach(function (element) {
             element.style.color = 'white';
@@ -124,7 +126,7 @@ function themeChanges(){
             element.classList.add('btn-close-white');
         });
         Array.from(radialGradientWrapper).forEach(function (element) {
-            element.style.background = "radial-gradient(#ffffff00, rgb(201,201,201))";
+            element.style.background = "radial-gradient(#ffffff00, rgb(35,35,35) 95%)";
         });
     }
 
@@ -188,6 +190,197 @@ function themeChanges(){
     counter++;
 }
 
+
+// functions for changing static
+var staticCounter = 0;
+
+function staticChange(){
+    const staticOverlay = document.getElementsByClassName("static-overlay")[0];
+    const staticButton = document.getElementById("static");
+
+    let currentOpacity = parseFloat(window.getComputedStyle(staticOverlay).opacity);
+
+    var staticLevelprev = "bi-reception-" + Math.floor((currentOpacity/4) * 100);
+
+    if (currentOpacity < 0.16) {
+        currentOpacity += 0.04;
+    } else {
+        currentOpacity = 0.0;
+    }
+
+    var staticLevel = "bi-reception-" + Math.floor((currentOpacity/4) * 100);
+
+    staticButton.classList.remove(staticLevelprev);
+    staticButton.classList.add(staticLevel);
+    
+    staticOverlay.style.opacity = currentOpacity;
+    sessionStorage.setItem("static", String(currentOpacity));
+}
+
+function setStaticPageLoad(){
+    const staticOverlay = document.getElementsByClassName("static-overlay")[0];
+    const staticButton = document.getElementById("static");
+
+    var static = sessionStorage.getItem("static");
+
+    if(static){
+
+        let currentOpacity = parseFloat(window.getComputedStyle(staticOverlay).opacity);
+
+        var staticLevel = "bi-reception-" + Math.floor((static/4) * 100);
+
+        var staticLevelprev = "bi-reception-" + Math.floor((currentOpacity/4) * 100);
+
+        staticButton.classList.remove(staticLevelprev);
+        staticButton.classList.add(staticLevel);
+
+        staticOverlay.style.opacity = static;
+    }
+}
+
+
+function drawChange(){
+    
+    const drawingBoard = document.getElementsByClassName("drawing-board")[0];
+    const wrapper = document.getElementsByTagName("section")[0];
+    const drawingButton = document.getElementById("draw");
+
+
+    drawingBoardDisplay = window.getComputedStyle(drawingBoard).display;
+    
+    if ((drawingBoardDisplay == 'none')){
+        drawingBoard.style.display = 'block';
+        drawingButton.classList.remove('bi-cursor-fill');
+        drawingButton.classList.add('bi-brush-fill');
+        wrapper.style.userSelect = 'none';
+        wrapper.style.pointerEvents = 'none';
+        sessionStorage.setItem("draw", "true")
+    }
+    else{
+        drawingBoard.style.display = 'none';
+        drawingButton.classList.remove('bi-brush-fill');
+        drawingButton.classList.add('bi-cursor-fill');
+        wrapper.style.userSelect = 'all';
+        wrapper.style.pointerEvents = 'all';
+        sessionStorage.setItem("draw", "false")
+    }
+}
+
+function drawChangeOnLoad(){
+    const drawingBoard = document.getElementsByClassName("drawing-board")[0];
+    const wrapper = document.getElementsByTagName("section")[0];
+    const drawingButton = document.getElementById("draw");
+
+
+    drawingBoardDisplay = window.getComputedStyle(drawingBoard).display;
+
+    if(sessionStorage.getItem("draw") == "true"){
+        drawingBoard.style.display = 'block';
+        drawingButton.classList.remove('bi-cursor-fill');
+        drawingButton.classList.add('bi-brush-fill');
+        wrapper.style.userSelect = 'none';
+        wrapper.style.pointerEvents = 'none';
+    }
+    else{
+        drawingBoard.style.display = 'none';
+        drawingButton.classList.remove('bi-brush-fill');
+        drawingButton.classList.add('bi-cursor-fill');
+        wrapper.style.userSelect = 'all';
+        wrapper.style.pointerEvents = 'all';
+    }
+}
+
+function settingsChange(){
+    const elements = document.querySelectorAll('.icon-settings');
+    elements.forEach(element => {
+        if (element.classList.contains('hidden')) {
+            element.classList.remove('hidden');
+            element.classList.add('visible');
+
+        } 
+        else {
+            element.classList.remove('visible');
+            element.classList.add('hidden');
+        }    
+    });    
+}
+
+// Drawing Canvas
+$(document).ready(function() {
+const canvas = document.getElementById('drawing-board');
+const ctx = canvas.getContext('2d');
+
+const canvasOffsetX = canvas.offsetLeft;
+const canvasOffsetY = canvas.offsetTop;
+
+canvas.width = window.innerWidth - canvasOffsetX;
+canvas.height = window.innerHeight - canvasOffsetY;
+
+let isPainting = false;
+let lineWidth = 8;
+let startX;
+let startY;
+
+const draw = (e) => {
+    if(!isPainting) {
+        return;
+    }
+
+    ctx.lineWidth = lineWidth;
+    ctx.lineCap = 'round';
+
+    ctx.lineTo(e.clientX - canvasOffsetX, e.clientY - canvasOffsetY);
+    ctx.stroke();
+}
+
+const drawMobile = (e) => {
+    if(!isPainting) {
+        return;
+    }
+
+    ctx.lineWidth = lineWidth;
+    ctx.lineCap = 'round';
+
+    ctx.lineTo(e.touches[0].clientX - canvasOffsetX, e.touches[0].clientY - canvasOffsetY - 50);
+    ctx.stroke();
+}
+
+canvas.addEventListener('mousedown', (e) => {
+    isPainting = true;
+    startX = e.clientX;
+    startY = e.clientY;
+});
+
+canvas.addEventListener('mouseup', e => {
+    isPainting = false;
+    ctx.stroke();
+    ctx.beginPath();
+});
+
+canvas.addEventListener('mousemove', draw);
+
+canvas.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    isPainting = true;
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    
+});
+
+canvas.addEventListener('touchend', e => {
+    isPainting = false;
+    ctx.stroke();
+    ctx.beginPath();
+});
+
+canvas.addEventListener('touchmove', e => {
+    e.preventDefault();
+    drawMobile(e);
+});
+
+});
+
+
 // Navbar icon hover animation
 $(document).ready(function() {
     const frames = ['gram icon animation 2.png', 'gram icon animation 3.png', 'gram icon animation 1.png'];
@@ -227,7 +420,8 @@ $(document).ready(function() {
             <li class="social-items mx-3"><a href="https://www.youtube.com/channel/UCZRzfx7rSdtQDxwk9zvJw4A"><i class="fa-brands fa-youtube"></i></a></li>
             <li class="social-items mx-3"><a href="https://soundcloud.com/gramfaucet"><i class="fab fa-soundcloud"></i></a></li>
         </ul>
-        <p class="">&copy; Benjamin Keninger &bull; <span id="current-year"></span></p>
+        <p class="mb-0">&copy; Benjamin Keninger &bull; <span id="current-year"></span></p>
+        <a style=">???</a>
         <a href="#" class="position-absolute bottom-0 end-0 p-3 d-md-block d-none"><i class="bi bi-arrow-up-circle h2 text-white"></i></a>
     </div>
 </footer>
