@@ -109,6 +109,7 @@
 </head>
 
 <body>
+    <div id="whole-body">
     <!-- NavBar-->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top"
         style="background-color: black; box-shadow: 0px 4px 4px 2px rgb(50,50,50, .3);">
@@ -149,8 +150,9 @@
                     <li class="nav-item mx-1 d-flex px-1 icon-settings hidden" onclick="switchTheme()">
                         <span id="sun" class="icon bi bi-sun settings"></span>
                     </li>
-                    <li class="nav-item mx-1 d-flex px-1 icon-settings hidden">
-                        <span class="icon bi bi-volume-up-fill settings"></span>
+                    <li class="nav-item mx-1 d-flex px-1 icon-settings hidden" onclick="playAudio()">
+                        <span id="audio" class="icon bi bi-volume-mute-fill settings"></span>
+                        <audio id="myAudio" src="audio/Rick Astley - Never Gonna Give You Up (Official Music Video).mp3" loop></audio>
                     </li>
                     <li class="nav-item mx-1 d-flex px-1 icon-settings hidden " onclick="drawChange()">
                         <span id="draw" class="icon bi bi-cursor-fill settings"></span>
@@ -205,90 +207,10 @@
 
 
 
-    <div id="demon-realm" class="d-nne" style="background: url(images/fire2.png); position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 10000; font-family: 'Comic Sans MS', cursive;">
-        <div class="d-flex justify-content-center mt-5 p-5">
-            <img src="images/lostsoultar.gif">
-            <div id="again">
-                <h2 style="color:red">Welcome to the Demon Realm!</h2>
-            </div>
-            <img src="images/lostsoultar.gif">
-        </div>
-        <marquee width="400px" behavior="SCROLL" bgcolor="black" loop="100" style="color: red;">This is where people
-            like you suffer</marquee>
-        <h3 style="color: red;" class="text-center">You have</h3>
-        <div class="d-flex justify-content-around">
-            <img src="images/doom-baron-of-hell.gif" width="200">
-            <div style="color: red; font-size: 7vw;" id="countdown">5</div>
-            <img src="images/doom-monster.gif" width="200">
-        </div>
-        <h3 style="color: red;" class="text-center">seconds left in the demon world!</h3>
-
-
-        <!-- hitwebcounter Code START -->
-        <div class="d-flex justify-content-center p-5">
-<!-- hitwebcounter Code START -->
-<a href="https://www.hitwebcounter.com" target="_blank">
-    <img src="https://hitwebcounter.com/counter/counter.php?page=15278132&style=0025&nbdigits=5&type=ip&initCount=0" alt="Visit counter For Websites" border="0" /></a>        
-        </div>
-
-        <div class="d-flex" style="position: absolute; bottom: 0;">
-            <img src="/images/fireplace-love.gif">
-            <img src="/images/fireplace-love.gif">
-            <img src="/images/fireplace-love.gif">
-            <img src="/images/fireplace-love.gif">
-            <img src="/images/fireplace-love.gif">
-            <img src="/images/fireplace-love.gif">
-            <img src="/images/fireplace-love.gif">
-            <img src="/images/fireplace-love.gif">
-            <img src="/images/fireplace-love.gif">
-            <img src="/images/fireplace-love.gif">
-            <img src="/images/fireplace-love.gif">
-            <img src="/images/fireplace-love.gif">
-        </div>
+    <div id="demon-realm" style="background: url(images/fire2.png); position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 10000; font-family: 'Comic Sans MS', cursive; display: none;">
 
     </div>
-
-    <script>
-        // Set the countdown duration in seconds
-        let countdownDuration = 4;
-
-        // Update the count down every 1 second
-        const countdownFunction = setInterval(function () {
-            // Display the current countdown value
-            document.getElementById("countdown").innerHTML = countdownDuration;
-
-            // Decrement the countdown duration
-            countdownDuration--;
-
-            // If the countdown is over, stop the interval and show "EXPIRED"
-            if (countdownDuration < 0) {
-                clearInterval(countdownFunction);
-                document.getElementById("countdown").innerHTML = "EXPIRED";
-            }
-        }, 1000);
-
-
-        // Function to check session variable and update DOM
-        //function checkVisitedDemonRealm() {
-            // Check if the session variable 'visitedDemonRealm' is true
-           sessionStorage.setItem("visitedDemonRealm", "true");
-            if (sessionStorage.getItem('visitedDemonRealm') == 'true') {
-                // Get the message container
-                const messageContainer = document.getElementById('again');
-                // Check if the <p> element already exists
-                if (!messageContainer.querySelector('p')) {
-                    // Create a new <p> element
-                    const p = document.createElement('p');
-                    // Set the text content of the <p> element
-                    p.textContent = '(again)';
-                    p.style.textAlign = 'center';
-                    p.style.color = 'red';
-                    // Append the <p> element to the message container
-                    messageContainer.appendChild(p);
-                }
-            }
-       // }
-    </script>
+</div>
 </body>
 
 <style>

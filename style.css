@@ -96,6 +96,10 @@ footer ::-moz-selection{
     animation: blink 1s infinite;
 }
 
+#demon-realm{
+    overflow: hidden;
+}
+
 
 .circle-animation-hover{
     outline: 3px solid white;
@@ -158,7 +162,6 @@ footer ::-moz-selection{
 .modal-title{
     font-family: 'Ubuntu Mono', sans-serif;
     font-size: x-large;
-    white-space: pre;
 }
 
 .modal-title::after{
@@ -241,7 +244,8 @@ footer ::-moz-selection{
 .background-logo{
     top: 60vh;
     left: 75vw;
-    min-height: 85vh;
+    min-height: 120vh;
+    max-height: 120vh;
     pointer-events: none;
     animation: rotateLogo 200s linear infinite; /* Adjust the duration as needed */
     position: absolute;
@@ -251,6 +255,8 @@ footer ::-moz-selection{
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
 }
+
+
 
 .wrapper{
     overflow: hidden; 
@@ -291,6 +297,7 @@ footer ::-moz-selection{
     z-index: 200;
     animation: shift .25s linear infinite both;
     pointer-events: none;
+    transition: .25s;
 }
 
 @keyframes shift {
@@ -433,7 +440,7 @@ button:hover {
 }
 
 footer{
-    z-index: 2;
+    z-index: 201;
 }
 
 .selection {
@@ -472,7 +479,12 @@ footer{
 }
 
 
+
 @media screen and (max-width: 767px) {
+
+    .background-logo{
+        display: none;
+    }
 
     .navbar-nav.icon-div{
         flex-direction: row;

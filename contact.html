@@ -24,12 +24,17 @@
 </head>
 
 <body>
+    <div id="whole-body">
     <!-- NavBar-->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: black; box-shadow: 0px 4px 4px 2px rgb(50,50,50, .3);">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top"
+        style="background-color: black; box-shadow: 0px 4px 4px 2px rgb(50,50,50, .3);">
         <div class="container-fluid mx-3 ">
-            <a href="https://kenibenj.com/" class="navbar-brand"><img width="60" height="60" src="images/newGram full transparent (white no border).png" class="nav-custom circle-animation-hover" alt="" /></a>
+            <a href="" class="navbar-brand"><img width="60" height="60"
+                    src="images/newGram full transparent (white no border).png" id="faucet-icon"
+                    class="nav-custom circle-animation-hover" alt="" /></a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"
+                aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
 
                 </span>
@@ -38,10 +43,10 @@
             <div class="collapse navbar-collapse text-end mx-md-3" id="navmenu">
                 <ul class="navbar-nav">
                     <li class="nav-item mx-1">
-                        <a href="https://kenibenj.com/" class="nav-link nav-custom">Home</a>
+                        <a href="" class="nav-link nav-custom">Home</a>
                     </li>
                     <li class="nav-item mx-1">
-                        <a href="code" class="nav-link nav-custom">Projects</a>
+                        <a href="code" class="nav-link nav-custom">Work</a>
                     </li>
                     <li class="nav-item mx-1">
                         <a href="blogMedia" class="nav-link nav-custom">Blog &amp; Media</a>
@@ -54,10 +59,27 @@
                     </li>
                 </ul>
 
-                <!-- Theme Change Button -->
-                <ul class="navbar-nav d-flex ms-auto icon-div" onclick="switchTheme()">
-                    <li class="nav-item mx-1 d-flex">
-                        <span id="sun" class="icon bi bi-sun" ></span>
+                <!-- Settings Button -->
+                <ul class="navbar-nav d-flex ms-auto icon-div align-items-center">
+
+                    <li class="nav-item mx-1 d-flex px-1 icon-settings hidden" onclick="switchTheme()">
+                        <span id="sun" class="icon bi bi-sun settings"></span>
+                    </li>
+                    <li class="nav-item mx-1 d-flex px-1 icon-settings hidden" onclick="playAudio()">
+                        <span id="audio" class="icon bi bi-volume-mute-fill settings"></span>
+                        <audio id="myAudio" src="audio/Rick Astley - Never Gonna Give You Up (Official Music Video).mp3" loop></audio>
+                    </li>
+                    <li class="nav-item mx-1 d-flex px-1 icon-settings hidden " onclick="drawChange()">
+                        <span id="draw" class="icon bi bi-cursor-fill settings"></span>
+                    </li>
+                    <li class="nav-item mx-1 d-flex px-1 icon-settings hidden" onclick="staticChange()">
+                        <span id="static" class="icon bi bi-reception-1 settings"></span>
+                    </li>
+
+                    <!-- Main Settings Button -->
+                    <li class="nav-item mx-1 d-flex ps-3" onclick="settingsChange()" id="settings"
+                        style="background-color: black; z-index: 10;">
+                        <span class="icon bi bi-sliders"></span>
                     </li>
                 </ul>
             </div>
@@ -65,14 +87,24 @@
     </nav>
 
     <!-- Content -->
+    <div class="wrapper">
+        <div id="drawing-board-wrapper" class="drawing-board" style="z-index: 100; display: none;">
+            <canvas id="drawing-board">
+
+            </canvas>
+        </div>
+
+        <img src="images/newGram full transparent(Background).png" class="background-logo">
+
+    <!-- Content Contact -->
     <section class="p-5 background" >
         <div class="container py-md-5 py-3 text-center text-md-start">
             <div class="row px-md-5">
                 <h1 class="page-title pb-sm-3">Contact</h1>
                 <div class="col-md">
                     <p class="para">
-                        Below is a form you can use to contact me for any reason whatsoever;
-                        I prefer communicating through emails as opposed to texts and phone calls, but I will respond to both nonetheless.
+                        Below is a form you can use to contact me for any reason whatsoever.
+                        I will always respond via email, though you are welcome to leave your phone number in your message as well.
                     </p>
                     <hr class="pb-3" />
                     <form onsubmit="sweetAlertFunction()" class="d-flex flex-column" id="form" action="https://formsubmit.co/78cd743b9e91d1f1c3807256e6600a28" method="POST">
@@ -114,12 +146,19 @@
             </div>
         </div>
     </section>
-
-    <div class="loader">
     </div>
+
+    <div class="loader"></div>
+    <div class="static-overlay"></div>
 
     <!-- Footer -->
-    <div id="footer-container">
+    <div id="footer-container"></div>
+
+
+
+    <div id="demon-realm" style="background: url(images/fire2.png); position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 10000; font-family: 'Comic Sans MS', cursive; display: none;">
+
     </div>
+</div>
 </body>
 </html>
