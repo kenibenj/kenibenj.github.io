@@ -530,14 +530,15 @@ window.addEventListener("scroll", () =>{
 // Code for when user interacts with ??? button (displays text and demon realm)
 var demonButtonCounter = 0;
 function demonRealm() {
-  var audio = document.getElementById("myAudio");
-  if (sessionStorage.getItem("audioIsPlaying") == "true") {
-    audio.pause();
-  }
 
   if(sessionStorage.getItem("visitedDemonRealm") == "true" && demonButtonCounter <= 0){
     demonButtonCounter++;
     return
+  }
+
+  var audio = document.getElementById("myAudio");
+  if (sessionStorage.getItem("audioIsPlaying") == "true") {
+    audio.pause();
   }
 
   var wrapper = document.getElementsByClassName("wrapper")[0];
