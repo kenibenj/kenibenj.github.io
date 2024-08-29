@@ -178,6 +178,10 @@ footer ::-moz-selection{
     stroke: 400px!important;
 }
 
+.btn-close:focus{
+    box-shadow: none;
+}
+
 
  .main{
     font-family: 'Ubuntu Mono', sans-serif;
