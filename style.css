@@ -503,6 +503,7 @@ footer{
     .icon-settings{
         opacity: 1;
         transform: translateX(0);
+        pointer-events: initial;
     }
 
     .sub-title::before{
