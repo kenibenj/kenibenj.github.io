@@ -579,6 +579,9 @@ function demonRealm() {
   document.body.style.justifyContent = "center";
   document.body.style.alignItems = "center";
   document.body.style.display = "flex";
+  if(sessionStorage.getItem("theme") == "dark"){
+    textContainer.style.color = "white";
+  }
   document.body.appendChild(textContainer);
 
   let currentIndex = 0;
